@@ -10,10 +10,11 @@ import '../../core/widgets.dart';
 import '../../domain/levels.dart';
 import '../../domain/models.dart';
 import '../../domain/quests.dart';
+import '../../l10n/app_localizations.dart';
 import '../../state/app_state.dart';
-import '../../state/backup_service.dart';
+import '../../state/cloud_sync.dart';
 import '../../state/controller.dart';
-import '../settings/backup_screen.dart';
+import '../settings/account_screen.dart';
 import 'exercise_widgets.dart';
 
 /// Runs a list of exercises: grade, feedback, hearts, retry of mistakes, and
@@ -385,13 +386,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   Palette.sky,
                   glyph: Glyph.badge,
                 ),
-              if (ref.watch(backupHintProvider) case final hint?)
-                _backupBanner(context, hint),
+              if (ref.watch(accountHintProvider) case final hint?)
+                _accountBanner(context, hint),
               const Spacer(),
               BigButton(
                 label: 'Continue',
                 onPressed: () {
-                  ref.read(backupHintProvider.notifier).clear();
+                  ref.read(accountHintProvider.notifier).clear();
                   Navigator.of(context).pop();
                 },
               ),
@@ -410,9 +411,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     );
   }
 
-  /// "10 lessons done" - a reminder to keep a copy outside the phone.
-  /// Tapping it opens Backup and restore.
-  Widget _backupBanner(BuildContext context, String milestone) => Padding(
+  /// "10 lessons done" - a reminder to add an email so the progress can be
+  /// found again on a new phone. Tapping it opens Account and cloud save.
+  Widget _accountBanner(BuildContext context, String milestone) => Padding(
         padding: const EdgeInsets.only(bottom: 8),
         child: Material(
           color: Palette.teal.withValues(alpha: 0.14),
@@ -420,9 +421,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           child: InkWell(
             borderRadius: BorderRadius.circular(14),
             onTap: () {
-              ref.read(backupHintProvider.notifier).clear();
+              ref.read(accountHintProvider.notifier).clear();
               Navigator.of(context).push(
-                MaterialPageRoute<void>(builder: (_) => const BackupScreen()),
+                MaterialPageRoute<void>(builder: (_) => const AccountScreen()),
               );
             },
             child: Padding(
@@ -433,7 +434,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      '$milestone! Save a backup copy so you never lose it. Tap here.',
+                      AppLocalizations.of(context).accountHint(milestone),
                       style: const TextStyle(
                         color: Palette.teal,
                         fontWeight: FontWeight.w800,

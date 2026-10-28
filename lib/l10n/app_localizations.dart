@@ -100,160 +100,226 @@ abstract class AppLocalizations {
     Locale('it'),
   ];
 
-  /// No description provided for @backupTitle.
+  /// No description provided for @accountTitle.
   ///
   /// In en, this message translates to:
-  /// **'Backup and restore'**
-  String get backupTitle;
+  /// **'Account and cloud save'**
+  String get accountTitle;
 
-  /// No description provided for @backupSettingsTile.
-  ///
-  /// In en, this message translates to:
-  /// **'Backup and restore'**
-  String get backupSettingsTile;
-
-  /// No description provided for @backupSettingsTileSubtitle.
+  /// No description provided for @accountTileSubtitle.
   ///
   /// In en, this message translates to:
   /// **'Keep your progress safe'**
-  String get backupSettingsTileSubtitle;
+  String get accountTileSubtitle;
 
-  /// No description provided for @backupIntro.
+  /// No description provided for @cloudUnavailable.
   ///
   /// In en, this message translates to:
-  /// **'Your progress lives only on this phone. If you uninstall the app, it is erased. Save the backup file somewhere safe, such as Files or Drive.'**
-  String get backupIntro;
+  /// **'Cloud save is not available in this build. Your progress stays on this phone.'**
+  String get cloudUnavailable;
 
-  /// No description provided for @backupFileCard.
+  /// No description provided for @cloudSignedOut.
   ///
   /// In en, this message translates to:
-  /// **'Backup file'**
-  String get backupFileCard;
+  /// **'Not saved to the cloud yet.'**
+  String get cloudSignedOut;
 
-  /// No description provided for @backupFileName.
+  /// No description provided for @cloudSyncing.
   ///
   /// In en, this message translates to:
-  /// **'File name: {name}'**
-  String backupFileName(String name);
+  /// **'Saving...'**
+  String get cloudSyncing;
 
-  /// No description provided for @backupFileHint.
+  /// No description provided for @cloudSaved.
   ///
   /// In en, this message translates to:
-  /// **'There is only one file. Saving again replaces the old one.'**
-  String get backupFileHint;
+  /// **'Saved to the cloud {when}'**
+  String cloudSaved(String when);
 
-  /// No description provided for @backupSaveButton.
+  /// No description provided for @cloudPending.
   ///
   /// In en, this message translates to:
-  /// **'Save backup file'**
-  String get backupSaveButton;
+  /// **'Changes will be saved in a moment.'**
+  String get cloudPending;
 
-  /// No description provided for @backupShareButton.
+  /// No description provided for @cloudOffline.
   ///
   /// In en, this message translates to:
-  /// **'Share backup file'**
-  String get backupShareButton;
+  /// **'No connection. Your progress is safe on this phone and will be saved when you are online.'**
+  String get cloudOffline;
 
-  /// No description provided for @backupImportButton.
+  /// No description provided for @cloudError.
   ///
   /// In en, this message translates to:
-  /// **'Restore from a file'**
-  String get backupImportButton;
+  /// **'Could not save to the cloud. Tap Save now to try again.'**
+  String get cloudError;
 
-  /// No description provided for @backupSaved.
+  /// No description provided for @cloudConflict.
   ///
   /// In en, this message translates to:
-  /// **'Backup saved.'**
-  String get backupSaved;
+  /// **'This phone and your account hold different progress. Choose which to keep.'**
+  String get cloudConflict;
 
-  /// No description provided for @backupSharedReady.
+  /// No description provided for @cloudSaveNow.
   ///
   /// In en, this message translates to:
-  /// **'Backup file is ready to share.'**
-  String get backupSharedReady;
+  /// **'Save now'**
+  String get cloudSaveNow;
 
-  /// No description provided for @backupSaveFailed.
+  /// No description provided for @cloudChoose.
   ///
   /// In en, this message translates to:
-  /// **'Could not save the backup. Please try again.'**
-  String get backupSaveFailed;
+  /// **'Choose'**
+  String get cloudChoose;
 
-  /// No description provided for @checkpointsTitle.
+  /// No description provided for @accountIntroAnonymous.
+  ///
+  /// In en, this message translates to:
+  /// **'Your progress is saved to the cloud on its own. Add an email and a password to get it back on a new phone or after you reinstall the app.'**
+  String get accountIntroAnonymous;
+
+  /// No description provided for @accountSignedInAs.
+  ///
+  /// In en, this message translates to:
+  /// **'Signed in as {email}'**
+  String accountSignedInAs(String email);
+
+  /// No description provided for @accountEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get accountEmail;
+
+  /// No description provided for @accountPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get accountPassword;
+
+  /// No description provided for @accountPasswordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters'**
+  String get accountPasswordHint;
+
+  /// No description provided for @accountCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get accountCreate;
+
+  /// No description provided for @accountHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'I already have an account'**
+  String get accountHaveAccount;
+
+  /// No description provided for @accountSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get accountSignIn;
+
+  /// No description provided for @accountForgot.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get accountForgot;
+
+  /// No description provided for @accountResetSent.
+  ///
+  /// In en, this message translates to:
+  /// **'If this email has an account, a link to reset the password is on its way.'**
+  String get accountResetSent;
+
+  /// No description provided for @accountSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get accountSignOut;
+
+  /// No description provided for @accountSignOutBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your progress stays safe in your account and is removed from this phone. Sign in again to get it back.'**
+  String get accountSignOutBody;
+
+  /// No description provided for @accountDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account and data'**
+  String get accountDelete;
+
+  /// No description provided for @accountDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This erases your account, your cloud save and your progress on this phone. It cannot be undone.'**
+  String get accountDeleteBody;
+
+  /// No description provided for @accountDeletePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password to confirm'**
+  String get accountDeletePassword;
+
+  /// No description provided for @accountDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Account deleted.'**
+  String get accountDeleted;
+
+  /// No description provided for @pointsTitle.
   ///
   /// In en, this message translates to:
   /// **'Restore points'**
-  String get checkpointsTitle;
+  String get pointsTitle;
 
-  /// No description provided for @checkpointsIntro.
+  /// No description provided for @pointsIntro.
   ///
   /// In en, this message translates to:
-  /// **'Quick snapshots kept inside the app. They are removed if you uninstall.'**
-  String get checkpointsIntro;
+  /// **'Copies kept in your account. They are made at milestones, once a day, and before a reset or a restore.'**
+  String get pointsIntro;
 
-  /// No description provided for @checkpointsEmpty.
+  /// No description provided for @pointsEmpty.
   ///
   /// In en, this message translates to:
   /// **'No restore points yet.'**
-  String get checkpointsEmpty;
+  String get pointsEmpty;
 
-  /// No description provided for @checkpointCreate.
+  /// No description provided for @pointDaily.
   ///
   /// In en, this message translates to:
-  /// **'Create a restore point'**
-  String get checkpointCreate;
+  /// **'Daily copy'**
+  String get pointDaily;
 
-  /// No description provided for @checkpointLabelField.
+  /// No description provided for @pointReplaced.
   ///
   /// In en, this message translates to:
-  /// **'Name (optional)'**
-  String get checkpointLabelField;
+  /// **'Before a restore'**
+  String get pointReplaced;
 
-  /// No description provided for @checkpointAuto.
+  /// No description provided for @pointReset.
   ///
   /// In en, this message translates to:
-  /// **'Automatic'**
-  String get checkpointAuto;
+  /// **'Before a reset'**
+  String get pointReset;
 
-  /// No description provided for @checkpointSummary.
+  /// No description provided for @pointSummary.
   ///
   /// In en, this message translates to:
   /// **'{xp} XP, {lessons} lessons, {streak} day streak'**
-  String checkpointSummary(int xp, int lessons, int streak);
+  String pointSummary(int xp, int lessons, int streak);
 
-  /// No description provided for @checkpointCreated.
-  ///
-  /// In en, this message translates to:
-  /// **'Restore point created.'**
-  String get checkpointCreated;
-
-  /// No description provided for @checkpointDeleted.
-  ///
-  /// In en, this message translates to:
-  /// **'Restore point deleted.'**
-  String get checkpointDeleted;
-
-  /// No description provided for @checkpointRename.
-  ///
-  /// In en, this message translates to:
-  /// **'Rename'**
-  String get checkpointRename;
-
-  /// No description provided for @checkpointDelete.
-  ///
-  /// In en, this message translates to:
-  /// **'Delete'**
-  String get checkpointDelete;
-
-  /// No description provided for @checkpointRestore.
+  /// No description provided for @pointRestore.
   ///
   /// In en, this message translates to:
   /// **'Restore'**
-  String get checkpointRestore;
+  String get pointRestore;
 
   /// No description provided for @restoreConfirmTitle.
   ///
   /// In en, this message translates to:
-  /// **'Restore this backup?'**
+  /// **'Restore this copy?'**
   String get restoreConfirmTitle;
 
   /// No description provided for @restoreConfirmBody.
@@ -274,59 +340,185 @@ abstract class AppLocalizations {
   /// **'Progress restored.'**
   String get restoreDone;
 
+  /// No description provided for @conflictTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Which progress do you want to keep?'**
+  String get conflictTitle;
+
+  /// No description provided for @conflictBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone and your account hold different progress. The one you do not choose is kept as a restore point.'**
+  String get conflictBody;
+
+  /// No description provided for @conflictPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone'**
+  String get conflictPhone;
+
+  /// No description provided for @conflictAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Your account'**
+  String get conflictAccount;
+
+  /// No description provided for @conflictUseAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Use the account progress'**
+  String get conflictUseAccount;
+
+  /// No description provided for @conflictUsePhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep this phone progress'**
+  String get conflictUsePhone;
+
+  /// No description provided for @conflictLater.
+  ///
+  /// In en, this message translates to:
+  /// **'Decide later'**
+  String get conflictLater;
+
+  /// No description provided for @signInTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signInTitle;
+
+  /// No description provided for @signInNoProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has no saved progress yet. Finish setting up and it will be saved here.'**
+  String get signInNoProgress;
+
+  /// No description provided for @onboardingHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'I already have an account'**
+  String get onboardingHaveAccount;
+
+  /// No description provided for @accountHint.
+  ///
+  /// In en, this message translates to:
+  /// **'{milestone}! Create an account so you never lose your progress. Tap here.'**
+  String accountHint(String milestone);
+
   /// No description provided for @cancel.
   ///
   /// In en, this message translates to:
   /// **'Cancel'**
   String get cancel;
 
-  /// No description provided for @save.
+  /// No description provided for @delete.
   ///
   /// In en, this message translates to:
-  /// **'Save'**
-  String get save;
+  /// **'Delete'**
+  String get delete;
 
-  /// No description provided for @onboardingHaveBackup.
+  /// No description provided for @errorInvalidEmail.
   ///
   /// In en, this message translates to:
-  /// **'I already have a backup'**
-  String get onboardingHaveBackup;
+  /// **'That email address does not look right.'**
+  String get errorInvalidEmail;
 
-  /// No description provided for @errorUnreadable.
+  /// No description provided for @errorWeakPassword.
   ///
   /// In en, this message translates to:
-  /// **'This file cannot be read. Pick a Multilingo backup file.'**
-  String get errorUnreadable;
+  /// **'Use a password with at least 8 characters.'**
+  String get errorWeakPassword;
 
-  /// No description provided for @errorNotMultilingo.
+  /// No description provided for @errorEmailInUse.
   ///
   /// In en, this message translates to:
-  /// **'This is not a Multilingo backup file.'**
-  String get errorNotMultilingo;
+  /// **'This email already has an account. Use Sign in instead.'**
+  String get errorEmailInUse;
+
+  /// No description provided for @errorWrongCredentials.
+  ///
+  /// In en, this message translates to:
+  /// **'The email or the password is wrong.'**
+  String get errorWrongCredentials;
+
+  /// No description provided for @errorNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'No connection. Please try again when you are online.'**
+  String get errorNetwork;
+
+  /// No description provided for @errorTooMany.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many tries. Please wait a few minutes.'**
+  String get errorTooMany;
+
+  /// No description provided for @errorDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been turned off.'**
+  String get errorDisabled;
+
+  /// No description provided for @errorNotAllowed.
+  ///
+  /// In en, this message translates to:
+  /// **'Email sign-in is not turned on for this app.'**
+  String get errorNotAllowed;
+
+  /// No description provided for @errorRecentLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Please sign in again and then retry.'**
+  String get errorRecentLogin;
+
+  /// No description provided for @errorUnsaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Your latest progress is not in the cloud yet. Connect to the internet and try again.'**
+  String get errorUnsaved;
 
   /// No description provided for @errorTooNew.
   ///
   /// In en, this message translates to:
-  /// **'This backup was made by a newer version of the app. Please update the app first.'**
+  /// **'This save was made by a newer version of the app. Please update the app first.'**
   String get errorTooNew;
 
   /// No description provided for @errorDamaged.
   ///
   /// In en, this message translates to:
-  /// **'This backup is damaged or was changed. It was not restored.'**
+  /// **'This save is damaged. It was not restored.'**
   String get errorDamaged;
 
   /// No description provided for @errorNoCourse.
   ///
   /// In en, this message translates to:
-  /// **'This backup has no progress for this course.'**
+  /// **'This save has no progress for this course.'**
   String get errorNoCourse;
+
+  /// No description provided for @errorTooBig.
+  ///
+  /// In en, this message translates to:
+  /// **'Your progress is too large to save to the cloud.'**
+  String get errorTooBig;
+
+  /// No description provided for @errorRefused.
+  ///
+  /// In en, this message translates to:
+  /// **'The cloud did not accept the request. Please try again later.'**
+  String get errorRefused;
 
   /// No description provided for @errorGeneric.
   ///
   /// In en, this message translates to:
   /// **'Something went wrong. Nothing was changed.'**
   String get errorGeneric;
+
+  /// No description provided for @resetNeedsOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect to the internet to reset, so your progress can be restored if you change your mind.'**
+  String get resetNeedsOnline;
 }
 
 class _AppLocalizationsDelegate

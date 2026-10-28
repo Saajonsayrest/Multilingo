@@ -138,9 +138,21 @@ xcode() {
   open_xcode
 }
 
-# First-time setup: check Flutter, deps, translations, pods
+# Every clone uses its own Firebase project. Its config file is not in Git.
+firebase_check() {
+  if [ -f lib/firebase_options.dart ]; then
+    done_msg "Firebase config found"
+  else
+    echo -e "${R}!${N} lib/firebase_options.dart is missing, so the app will not build yet."
+    echo "  Make your own Firebase project, then run: flutterfire configure"
+    echo "  Steps are in README.md, section \"Cloud save\"."
+  fi
+}
+
+# First-time setup: check Flutter, Firebase config, deps, translations, pods
 first_setup() {
   check_flutter
+  firebase_check
   get
   gen_l10n
   pods
@@ -192,6 +204,7 @@ usage() {
   echo -e "\n${B}STANDALONE COMMANDS:${N}"
   echo "  ./setup.sh s    - First-time setup (Get + Translations + Pods)"
   echo "  ./setup.sh art  - Rebuild fox art, app icon and launch screens"
+  echo "  ./setup.sh rules - Check the Firestore rules against your Firebase project"
   echo "  ./setup.sh a    - Run Android"
   echo "  ./setup.sh ios  - Run iOS"
   echo "  ./setup.sh rel  - Run in release mode (real speed, use this to judge speed)"
@@ -218,6 +231,7 @@ check_flutter
 case "$1" in
   s)    first_setup; exit 0 ;;
   art)  art; exit 0 ;;
+  rules) tool/rules_smoke.sh; exit $? ;;
   a)    run_android; exit 0 ;;
   ios)  run_ios; exit 0 ;;
   rel)  run_release; exit 0 ;;

@@ -71,7 +71,7 @@ void main() {
     ));
     await look(t);
 
-    await t.enterText(find.byType(TextField), 'Sajon');
+    await t.enterText(find.byType(TextField), 'Tester');
     await look(t);
     for (var i = 0; i < 3; i++) {
       await t.tap(find.byType(BigButton));

@@ -4,7 +4,12 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <!-- Speaking exercises: the microphone is only used while the learner taps the mic button. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- Cloud save: progress goes to the learner's own account. Release builds need this. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- The cloud save is the one backup. Android's own app-data backup is off, so an old copy
+         can never be restored over a newer cloud save or bring back a stale sign-in. -->
     <application
+        android:allowBackup="false"
         android:label="Multilingo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

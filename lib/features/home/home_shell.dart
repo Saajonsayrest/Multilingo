@@ -8,6 +8,7 @@ import '../../core/theme.dart';
 import '../../core/widgets.dart';
 import '../../domain/dates.dart';
 import '../../state/app_state.dart';
+import '../../state/cloud_sync.dart';
 import '../../state/controller.dart';
 import '../../state/course_state.dart';
 import '../../state/reminder_service.dart';
@@ -65,6 +66,7 @@ class _HomeShellState extends ConsumerState<HomeShell>
     if (state == AppLifecycleState.resumed) {
       ref.read(appProvider.notifier).refresh();
       ref.read(reminderServiceProvider).schedule();
+      ref.read(cloudSyncProvider.notifier).syncSoon();
     }
   }
 

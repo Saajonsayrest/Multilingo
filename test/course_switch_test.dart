@@ -1,9 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:multilingo/data/course.dart';
-import 'package:multilingo/state/backup_service.dart';
 import 'package:multilingo/state/controller.dart';
 import 'package:multilingo/state/course_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,19 +8,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<ProviderContainer> boot() async {
   SharedPreferences.setMockInitialValues({});
   final prefs = await SharedPreferences.getInstance();
-  final dir = await Directory.systemTemp.createTemp('multilingo_switch_test');
-  addTearDown(() => dir.delete(recursive: true));
   var tick = 0;
   final c = ProviderContainer(overrides: [
     prefsProvider.overrideWithValue(prefs),
-    backupDirProvider.overrideWithValue(Future.value(dir)),
     clockProvider.overrideWithValue(
       () => DateTime(2026, 3, 2, 10).add(Duration(minutes: tick++)),
     ),
   ]);
   addTearDown(c.dispose);
   c.read(appProvider.notifier).completeOnboarding(
-      name: 'Sajon', dailyGoalXp: 20, level: 'beginner');
+      name: 'Tester', dailyGoalXp: 20, level: 'beginner');
   return c;
 }
 
@@ -57,7 +51,7 @@ void main() {
     var s = c.read(appProvider);
     expect(s.completedLessons, isEmpty, reason: 'German starts fresh');
     expect(s.xp, xpAfterItalian, reason: 'XP is shared');
-    expect(s.name, 'Sajon');
+    expect(s.name, 'Tester');
     expect(s.onboarded, isTrue);
 
     ctrl.finishSession(done(deLesson));
@@ -87,31 +81,6 @@ void main() {
     final c = await boot();
     c.read(appProvider.notifier).switchCourse('xx');
     expect(c.read(activeCourseProvider), 'it');
-  });
-
-  test('a backup keeps both languages and restores the active one', () async {
-    final c = await boot();
-    final ctrl = c.read(appProvider.notifier);
-    final itLesson = Course.of('it').flatLessons.first.id;
-    final deLesson = Course.of('de').flatLessons.first.id;
-    ctrl.finishSession(done(itLesson));
-    ctrl.switchCourse('de');
-    ctrl.finishSession(done(deLesson));
-
-    final svc = c.read(backupServiceProvider);
-    final saved = svc.snapshot(label: 'both');
-    expect(saved.activeCourse, 'de');
-    expect(saved.courses.keys.toSet(), {'it', 'de'});
-
-    ctrl.resetAll();
-    ctrl.switchCourse('it');
-    expect(c.read(appProvider).completedLessons, isEmpty);
-
-    await svc.restore(saved);
-    expect(c.read(activeCourseProvider), 'de');
-    expect(c.read(appProvider).completedLessons, {deLesson});
-    ctrl.switchCourse('it');
-    expect(c.read(appProvider).completedLessons, {itLesson});
   });
 
   test('reset wipes every language', () async {

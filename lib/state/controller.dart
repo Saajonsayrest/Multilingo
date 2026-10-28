@@ -4,11 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/languages.dart';
-import '../domain/backup.dart';
 import '../domain/dates.dart';
 import '../domain/league.dart';
 import '../domain/levels.dart';
 import '../domain/quests.dart';
+import '../domain/state_split.dart';
 import 'app_state.dart';
 import 'course_state.dart';
 

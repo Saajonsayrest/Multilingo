@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -5,8 +6,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/theme.dart';
 import 'features/home/home_shell.dart';
 import 'features/onboarding/onboarding_screen.dart';
+import 'features/settings/account_screen.dart';
+import 'firebase_options.dart';
 import 'l10n/app_localizations.dart';
-import 'state/backup_service.dart';
+import 'state/auth_gateway.dart';
+import 'state/cloud_store.dart';
+import 'state/cloud_sync.dart';
 import 'state/controller.dart';
 import 'state/reminder_service.dart';
 import 'state/widget_sync.dart';
@@ -14,12 +19,30 @@ import 'state/widget_sync.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
+  final cloud = await _startFirebase();
   runApp(
     ProviderScope(
-      overrides: [prefsProvider.overrideWithValue(prefs)],
+      overrides: [
+        prefsProvider.overrideWithValue(prefs),
+        if (cloud) ...[
+          authGatewayProvider.overrideWithValue(FirebaseAuthGateway()),
+          cloudStoreProvider.overrideWithValue(FirestoreCloudStore()),
+        ],
+      ],
       child: const MultilingoApp(),
     ),
   );
+}
+
+/// Starts Firebase. It needs no connection. If it cannot start (for example
+/// on a platform without a config) the app still works, on this phone only.
+Future<bool> _startFirebase() async {
+  try {
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    return true;
+  } catch (_) {
+    return false;
+  }
 }
 
 class MultilingoApp extends ConsumerWidget {
@@ -28,11 +51,11 @@ class MultilingoApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(appProvider);
-    // Keep the single backup file fresh after every change.
+    // Starts the cloud sync and keeps it alive without rebuilding the app on
+    // every status change.
+    ref.listen(cloudSyncProvider, (_, _) {});
     ref.listen(appProvider, (before, after) {
-      final backup = ref.read(backupServiceProvider);
-      backup.scheduleAutoSave();
-      backup.noteChange(before, after);
+      ref.read(cloudSyncProvider.notifier).onStateChanged(before, after);
       ref.read(widgetSyncProvider).schedule();
       // Practising today, a new streak or a new time changes the reminders.
       ref.read(reminderServiceProvider).schedule();
@@ -49,7 +72,9 @@ class MultilingoApp extends ConsumerWidget {
         'dark' => ThemeMode.dark,
         _ => ThemeMode.system,
       },
-      home: s.onboarded ? const HomeShell() : const OnboardingScreen(),
+      home: ConflictHost(
+        child: s.onboarded ? const HomeShell() : const OnboardingScreen(),
+      ),
     );
   }
 }

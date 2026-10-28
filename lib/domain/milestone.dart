@@ -6,8 +6,8 @@ const streakMilestones = {7, 14, 30, 50, 100, 365};
 /// Every this many finished lessons is a milestone.
 const lessonMilestoneEvery = 5;
 
-/// A short text if the change from [before] to [after] is worth backing up,
-/// like Duolingo's "you reached something" moments. Null otherwise.
+/// A short text if the change from [before] to [after] is worth a restore
+/// point, like Duolingo's "you reached something" moments. Null otherwise.
 ///
 /// Only steady progress counts. A restore, a reset or a language switch
 /// replaces the state in one jump, so those never look like a milestone.

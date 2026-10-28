@@ -1,5 +1,5 @@
 /// A language the app can teach. [id] is the course id used in saved data and
-/// backup files. It never changes once shipped.
+/// cloud saves. It never changes once shipped.
 class Language {
   const Language(this.id, this.name, this.flag, this.ttsLocale);
 

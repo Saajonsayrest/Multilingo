@@ -84,7 +84,7 @@ class AppState {
   }
 
   /// Pulls every value back into its legal range. Used on restore, because
-  /// a backup file is user-supplied data and can be edited by hand.
+  /// a cloud save can come from another phone or an older app version.
   AppState sanitized() {
     const goals = [10, 20, 30, 50];
     const themes = ['system', 'light', 'dark'];

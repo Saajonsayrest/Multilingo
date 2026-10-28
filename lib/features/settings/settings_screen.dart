@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/theme.dart';
+import '../../core/status.dart';
 import '../../core/widgets.dart';
-import '../../domain/backup.dart';
 import '../../l10n/app_localizations.dart';
-import '../../state/backup_service.dart';
+import '../../state/cloud_sync.dart';
 import '../../state/controller.dart';
 import '../../state/course_state.dart';
 import '../../state/reminder_service.dart';
-import 'backup_screen.dart';
+import 'account_screen.dart';
 
 const _dailyGoals = [10, 20, 30, 50];
 
@@ -127,13 +127,13 @@ class SettingsScreen extends ConsumerWidget {
             child: ListTile(
               leading: const Icon(Icons.cloud_upload_rounded, color: Palette.teal),
               title: Text(
-                AppLocalizations.of(context).backupSettingsTile,
+                AppLocalizations.of(context).accountTitle,
                 style: const TextStyle(fontWeight: FontWeight.w800),
               ),
-              subtitle: Text(AppLocalizations.of(context).backupSettingsTileSubtitle),
+              subtitle: Text(AppLocalizations.of(context).accountTileSubtitle),
               trailing: const Icon(Icons.chevron_right_rounded),
               onTap: () => Navigator.of(context).push(
-                MaterialPageRoute<void>(builder: (_) => const BackupScreen()),
+                MaterialPageRoute<void>(builder: (_) => const AccountScreen()),
               ),
             ),
           ),
@@ -260,7 +260,7 @@ Future<void> _confirmReset(BuildContext context, WidgetRef ref) async {
       title: const Text('Reset all progress?'),
       content: const Text(
         'Your XP, streak, gems, lessons and achievements will be deleted. '
-        'A restore point is saved first, so you can undo this in Backup and restore.',
+        'A restore point is saved first, so you can undo this in Account and cloud save.',
       ),
       actions: [
         TextButton(
@@ -276,12 +276,18 @@ Future<void> _confirmReset(BuildContext context, WidgetRef ref) async {
     ),
   );
   if (confirmed != true) return;
-  // Save an undo point before wiping, but never block the reset on it.
+  // The undo point lives in the cloud. Without it the reset could not be
+  // undone, so a failed save stops the reset. With no account there is
+  // nothing in the cloud to protect.
   try {
-    await ref
-        .read(backupServiceProvider)
-        .createCheckpoint('Before reset', kind: BackupKind.auto);
-  } catch (_) {}
+    await ref.read(cloudSyncProvider.notifier).checkpointBeforeReset();
+  } catch (_) {
+    if (context.mounted) {
+      showToast(context, AppLocalizations.of(context).resetNeedsOnline,
+          kind: StatusKind.error);
+    }
+    return;
+  }
   ref.read(appProvider.notifier).resetAll();
   navigator.popUntil((route) => route.isFirst);
 }

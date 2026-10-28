@@ -1,0 +1,66 @@
+rules_version = '2';
+
+// Each learner can reach only their own documents, and only in the shape the
+// app writes. Everything not listed here is refused.
+//
+//   users/{uid}                    the save, one document
+//   users/{uid}/checkpoints/c0..c4 the restore points, five fixed slots
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // The part a save and a restore point have in common.
+    function validPayload(d) {
+      return d.schema is int && d.schema >= 1
+        && d.savedAt is int
+        && d.appVersion is string && d.appVersion.size() <= 20
+        && d.activeCourse is string && d.activeCourse.size() <= 8
+        && d.profile is map
+        && d.courses is map && d.courses.size() >= 1 && d.courses.size() <= 8;
+    }
+
+    function validSave(d) {
+      return d.keys().hasOnly(['schema', 'rev', 'savedAt', 'appVersion', 'activeCourse', 'profile', 'courses'])
+        && d.keys().hasAll(['schema', 'rev', 'savedAt', 'appVersion', 'activeCourse', 'profile', 'courses'])
+        && d.rev is int
+        && validPayload(d);
+    }
+
+    function validCheckpoint(d) {
+      return d.keys().hasOnly(['schema', 'savedAt', 'appVersion', 'activeCourse', 'profile', 'courses', 'reason', 'label'])
+        && d.keys().hasAll(['schema', 'savedAt', 'appVersion', 'activeCourse', 'profile', 'courses', 'reason', 'label'])
+        && d.reason in ['milestone', 'daily', 'replaced', 'reset']
+        && d.label is string && d.label.size() <= 40
+        && validPayload(d);
+    }
+
+    match /users/{uid} {
+      allow read, delete: if isOwner(uid);
+
+      // The first save is revision 1. Every later save is exactly one higher
+      // than the stored one, so two phones can never overwrite each other
+      // without one of them noticing.
+      allow create: if isOwner(uid)
+        && validSave(request.resource.data)
+        && request.resource.data.rev == 1;
+
+      allow update: if isOwner(uid)
+        && validSave(request.resource.data)
+        && request.resource.data.rev == resource.data.rev + 1;
+
+      match /checkpoints/{slot} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && slot.matches('c[0-4]')
+          && validCheckpoint(request.resource.data);
+      }
+    }
+  }
+}

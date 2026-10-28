@@ -17,7 +17,7 @@ void main() {
     final prefs = await SharedPreferences.getInstance();
     final c = ProviderContainer(overrides: [prefsProvider.overrideWithValue(prefs)]);
     final n = c.read(appProvider.notifier);
-    n.completeOnboarding(name: 'Sajon', dailyGoalXp: 20, level: 'beginner');
+    n.completeOnboarding(name: 'Tester', dailyGoalXp: 20, level: 'beginner');
     for (final l in Course.instance.lessonsOfLevel('A1')) {
       n.finishSession(LessonResult(
         lessonId: l.id,

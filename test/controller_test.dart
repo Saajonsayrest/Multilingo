@@ -196,7 +196,7 @@ void main() {
       expect(c.read(appProvider).heartsAt(DateTime(2026, 3, 2, 10)), maxHearts);
     });
 
-    test('backups keep passed levels and drop invalid ones', () {
+    test('a restored save keeps passed levels and drops invalid ones', () {
       final s = (AppState()
             ..passedLevels = {'A1', 'Z9'}
             ..checkpointBest = {'A1': 250, 'Z9': 5})

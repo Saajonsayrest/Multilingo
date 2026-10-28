@@ -6,9 +6,10 @@ import '../../core/theme.dart';
 import '../../core/widgets.dart';
 import '../../l10n/app_localizations.dart';
 import '../../data/languages.dart';
+import '../../state/cloud_sync.dart';
 import '../../state/controller.dart';
 import '../../state/course_state.dart';
-import '../settings/backup_screen.dart';
+import '../settings/account_screen.dart';
 
 /// Three quick steps: name, level, daily goal.
 class OnboardingScreen extends ConsumerStatefulWidget {
@@ -75,10 +76,12 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   onPressed: () => setState(() => _step--),
                   child: const Text('Back'),
                 )
-              else
+              else if (ref.watch(cloudSyncProvider).phase != SyncPhase.unavailable)
                 TextButton(
-                  onPressed: () => importFromFile(context, ref),
-                  child: Text(AppLocalizations.of(context).onboardingHaveBackup),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (_) => const SignInScreen()),
+                  ),
+                  child: Text(AppLocalizations.of(context).onboardingHaveAccount),
                 ),
             ],
           ),

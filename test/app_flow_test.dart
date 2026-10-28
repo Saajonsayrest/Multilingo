@@ -32,14 +32,14 @@ void main() {
   testWidgets('onboarding leads to the learning path', (tester) async {
     final c = await pumpApp(tester);
     expect(find.text('Ciao! I am Pip.'), findsOneWidget);
-    await tester.enterText(find.byType(TextField), 'Sajon');
+    await tester.enterText(find.byType(TextField), 'Tester');
     for (var i = 0; i < 3; i++) {
       await tester.tap(find.byType(BigButton));
       // The home path pulses forever, so pumpAndSettle would never finish.
       await tester.pump(const Duration(milliseconds: 500));
     }
     expect(c.read(appProvider).onboarded, isTrue);
-    expect(c.read(appProvider).name, 'Sajon');
+    expect(c.read(appProvider).name, 'Tester');
     expect(find.text('Basics'), findsOneWidget);
     expect(find.text('Learn'), findsWidgets);
     await finish(tester, c);
