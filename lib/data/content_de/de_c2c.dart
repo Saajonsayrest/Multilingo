@@ -1,0 +1,336 @@
+import '../../domain/models.dart';
+
+const List<UnitDef> deUnitsC2c = [
+  UnitDef(
+    id: 'de_u54',
+    title: 'Poetry',
+    subtitle: 'Verse and imagery',
+    level: 'C2',
+    colorValue: 0xFF00CD9C,
+    guide: [
+      'German poets often put the subject after the verb, as in Sacht sinkt die Sonne. This is called Inversion, and it helps the rhythm.',
+      "Poets shorten words to fit the metre. They drop a final -e, as in Lieb' for Liebe, and this is called Apokope.",
+      'German has many precise feeling words. Use Wehmut for a gentle sadness mixed with longing, and Sehnsucht for a strong wish for something far away. Every German noun has a capital letter and a gender, so write die Sehnsucht.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'de_u54l1',
+        title: 'Sea, night and memory',
+        words: [
+          Word('de_u54l1w1', 'das Meer', 'sea'),
+          Word('de_u54l1w2', 'die Nacht', 'night'),
+          Word('de_u54l1w3', 'die Erinnerung', 'memory'),
+          Word('de_u54l1w4', 'die Sehnsucht', 'longing'),
+          Word('de_u54l1w5', 'die Welle', 'wave'),
+          Word('de_u54l1w6', 'der Stern', 'star'),
+        ],
+        sentences: [
+          Sentence(
+            'Das Meer flüstert in der kalten, stillen Nacht ein uraltes Lied.',
+            'The sea whispers an ancient song in the cold and silent night.',
+            extraIt: ['die Erinnerung', 'der Stern'],
+            extraEn: ['memory', 'wave'],
+          ),
+          Sentence(
+            'Die Erinnerung an dich leuchtet wie ein ferner Stern in meinem Herzen.',
+            'The memory of you shines like a distant star in my heart.',
+            extraIt: ['die Welle', 'die Sehnsucht'],
+            extraEn: ['longing', 'sea'],
+          ),
+          Sentence(
+            'Eine sanfte Welle streichelt behutsam das Ufer, während die Sonne untergeht.',
+            'A gentle wave caresses the shore while the sun sets.',
+            extraIt: ['die Nacht', 'die Erinnerung'],
+            extraEn: ['night', 'memory'],
+          ),
+          Sentence(
+            'Meine Sehnsucht ist, dorthin zurückzukehren, wo die Nacht niemals endet.',
+            'My longing is to return there, where the night never ends.',
+            extraIt: ['der Stern', 'das Meer'],
+            extraEn: ['sea', 'star'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u54l2',
+        title: 'Word order and elision',
+        words: [
+          Word('de_u54l2w1', 'die Inversion', 'inversion'),
+          Word('de_u54l2w2', 'die Elision', 'elision'),
+          Word('de_u54l2w3', 'die Apokope', 'truncation'),
+          Word('de_u54l2w4', 'der Vers', 'poetic line'),
+          Word('de_u54l2w5', 'der Reim', 'rhyme'),
+          Word('de_u54l2w6', 'der Rhythmus', 'rhythm'),
+        ],
+        sentences: [
+          Sentence(
+            'Süß ist der Abend, und das müde Herz findet endlich Ruhe.',
+            'Sweet is the evening, and the tired heart finally rests.',
+            extraIt: ['der Rhythmus', 'die Elision'],
+            extraEn: ['rhythm', 'verse'],
+          ),
+          Sentence(
+            'Sacht sinkt die Sonne, und über die grünen Hügel fällt der Schatten.',
+            'The sun sinks gently, and the shadow falls over the green hills.',
+            extraIt: ['die Inversion', 'der Vers'],
+            extraEn: ['elision', 'truncation'],
+          ),
+          Sentence(
+            'Singe, meine Seele, von der sanften Zärtlichkeit derer, die niemals vergessen.',
+            'Sing, my soul, the sweet tenderness of those who never forget.',
+            extraIt: ['die Erinnerung', 'der Vers'],
+            extraEn: ['memory', 'verse'],
+          ),
+          Sentence(
+            'Es gibt kein Licht mehr, doch der Gesang bleibt in der Stille.',
+            'There is no more light, but the song remains in the silence.',
+            extraIt: ['der Reim', 'der Rhythmus'],
+            extraEn: ['rhythm', 'rhyme'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u54l3',
+        title: 'Feeling with precision',
+        words: [
+          Word('de_u54l3w1', 'die Wehmut', 'melancholy'),
+          Word('de_u54l3w2', 'das Bedauern', 'regret'),
+          Word('de_u54l3w3', 'die Qual', 'anguish'),
+          Word('de_u54l3w4', 'die Erleichterung', 'relief'),
+          Word('de_u54l3w5', 'das Staunen', 'wonder'),
+          Word('de_u54l3w6', 'die Unruhe', 'unease'),
+        ],
+        sentences: [
+          Sentence(
+            'Ich empfinde eher eine sanfte, stille Wehmut als echte Traurigkeit.',
+            'I feel a sweet and quiet melancholy, rather than true sadness.',
+            extraIt: ['die Erleichterung', 'das Staunen'],
+            extraEn: ['relief', 'wonder'],
+          ),
+          Sentence(
+            'Ihr Schweigen hinterlässt in mir ein Bedauern, das nicht verlöschen will.',
+            'Her silence leaves me a regret that will never fade away.',
+            extraIt: ['die Unruhe', 'die Erleichterung'],
+            extraEn: ['anguish', 'unease'],
+          ),
+          Sentence(
+            'Wenn ich dich wiedersehe, empfinde ich ein Staunen, das mir den Atem nimmt.',
+            'When I see you again, I feel a wonder that takes my breath away.',
+            extraIt: ['die Wehmut', 'das Bedauern'],
+            extraEn: ['melancholy', 'regret'],
+          ),
+          Sentence(
+            'Meine Qual ist so stark, dass ich das Gefühl habe, innerlich zu ertrinken.',
+            'My anguish is so strong that I feel as if I were drowning inside.',
+            extraIt: ['die Erleichterung', 'das Staunen'],
+            extraEn: ['relief', 'wonder'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u54l4',
+        title: 'Reading the lines',
+        words: [
+          Word('de_u54l4w1', 'die Metapher', 'metaphor'),
+          Word('de_u54l4w2', 'das Symbol', 'symbol'),
+          Word('de_u54l4w3', 'die Anspielung', 'allusion'),
+          Word('de_u54l4w4', 'die Mehrdeutigkeit', 'ambiguity'),
+          Word('de_u54l4w5', 'das Bild', 'image'),
+          Word('de_u54l4w6', 'der Ton', 'tone'),
+        ],
+        sentences: [
+          Sentence(
+            'Die Metapher des Flusses zeigt die Zeit, die niemals stillsteht.',
+            'The metaphor of the river shows time that never stops.',
+            extraIt: ['das Symbol', 'der Ton'],
+            extraEn: ['symbol', 'tone'],
+          ),
+          Sentence(
+            'Das Symbol des geschlossenen Fensters deutet auf eine Einsamkeit hin, die niemand sieht.',
+            'The symbol of the closed window suggests a loneliness that nobody sees.',
+            extraIt: ['das Bild', 'die Anspielung'],
+            extraEn: ['image', 'allusion'],
+          ),
+          Sentence(
+            'Die Mehrdeutigkeit des Verses überlässt dem Leser die Wahl der Bedeutung.',
+            'The ambiguity of the line leaves the reader the choice of meaning.',
+            extraIt: ['der Ton', 'die Metapher'],
+            extraEn: ['tone', 'metaphor'],
+          ),
+          Sentence(
+            'Der wehmütige Ton des Gedichts steht im Gegensatz zum Licht des Morgens.',
+            'The melancholy tone of the poem contrasts with the morning light.',
+            extraIt: ['das Bild', 'das Symbol'],
+            extraEn: ['image', 'symbol'],
+          ),
+        ],
+      ),
+    ],
+  ),
+  UnitDef(
+    id: 'de_u55',
+    title: 'Mastery',
+    subtitle: 'Complex texts',
+    level: 'C2',
+    colorValue: 0xFFFF86D0,
+    guide: [
+      'German argument sentences often use a main clause with several subordinate clauses. In each subordinate clause the conjugated verb goes to the end, and Konjunktiv I reports a claim, as in die Technik verschaffe uns Zeit.',
+      'Mix registers with care: folglich and dennoch suit formal writing, while also and na ja suit everyday speech.',
+      'When you paraphrase, keep the logic of the original and change only the words. Formal German often turns verbs into nouns, such as die Umsetzung des Plans, so a summary can be shorter.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'de_u55l1',
+        title: 'Long arguments',
+        words: [
+          Word('de_u55l1w1', 'die These', 'thesis'),
+          Word('de_u55l1w2', 'die Argumentation', 'argument'),
+          Word('de_u55l1w3', 'die Prämisse', 'premise'),
+          Word('de_u55l1w4', 'die Schlussfolgerung', 'conclusion'),
+          Word('de_u55l1w5', 'der Einwand', 'objection'),
+          Word('de_u55l1w6', 'widerlegen', 'refute'),
+        ],
+        sentences: [
+          Sentence(
+            'Obwohl viele behaupten, die Technik verschaffe uns Zeit, zeigt die Wirklichkeit oft das Gegenteil.',
+            'Although many claim that technology frees up time, reality often shows the opposite.',
+            extraIt: ['die These', 'der Einwand'],
+            extraEn: ['thesis', 'objection'],
+          ),
+          Sentence(
+            'Da die Prämisse schwach ist, kann die daraus folgende Schlussfolgerung nicht akzeptiert werden.',
+            'Since the premise is weak, the conclusion that follows cannot be accepted.',
+            extraIt: ['die Argumentation', 'widerlegen'],
+            extraEn: ['argument', 'refute'],
+          ),
+          Sentence(
+            'Selbst wenn ich alle Beweise hätte, bezweifle ich, dass sie ausreichen, um diesen Einwand zu widerlegen.',
+            'Even if I had all the evidence, I doubt that they are enough to refute that objection.',
+            extraIt: ['die Prämisse', 'die These'],
+            extraEn: ['premise', 'thesis'],
+          ),
+          Sentence(
+            'Hätte die Kommission auf die Fachleute gehört, wäre das Projekt nicht gescheitert.',
+            'If the committee had listened to the experts, the project would not have failed.',
+            extraIt: ['der Einwand', 'die Argumentation'],
+            extraEn: ['objection', 'argument'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u55l2',
+        title: 'Mixed registers',
+        words: [
+          Word('de_u55l2w1', 'folglich', 'therefore'),
+          Word('de_u55l2w2', 'kurzum', 'in short'),
+          Word('de_u55l2w3', 'dennoch', 'nevertheless'),
+          Word('de_u55l2w4', 'zumal', 'since'),
+          Word('de_u55l2w5', 'das heißt', 'that is'),
+          Word('de_u55l2w6', 'nun denn', 'well then'),
+        ],
+        sentences: [
+          Sentence(
+            'Folglich muss der Vorschlag abgelehnt werden, kurzum, er lohnt sich für uns überhaupt nicht.',
+            'Therefore, the proposal must be rejected, in short it does not suit us at all.',
+            extraIt: ['dennoch', 'das heißt'],
+            extraEn: ['nevertheless', 'that is'],
+          ),
+          Sentence(
+            'Dennoch möchte ich nicht mit dir streiten, zumal wir seit vielen Jahren befreundet sind.',
+            'Nevertheless, I do not want to argue with you, since we have been friends for many years.',
+            extraIt: ['folglich', 'das heißt'],
+            extraEn: ['therefore', 'that is'],
+          ),
+          Sentence(
+            'Das heißt, das Projekt ist gescheitert, und niemand hat den Mut, es zuzugeben.',
+            'That is, the project has failed, and nobody has the courage to admit it.',
+            extraIt: ['zumal', 'nun denn'],
+            extraEn: ['since', 'well then'],
+          ),
+          Sentence(
+            'Nun denn, Leute, machen wir uns an die Arbeit, denn die Zeit drängt wirklich.',
+            'Well then, guys, let us get to work, because time is really running short.',
+            extraIt: ['folglich', 'kurzum'],
+            extraEn: ['therefore', 'nevertheless'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u55l3',
+        title: 'Summary and paraphrase',
+        words: [
+          Word('de_u55l3w1', 'die Zusammenfassung', 'summary'),
+          Word('de_u55l3w2', 'die Paraphrase', 'paraphrase'),
+          Word('de_u55l3w3', 'zusammenfassen', 'to summarise'),
+          Word('de_u55l3w4', 'umformulieren', 'to reformulate'),
+          Word('de_u55l3w5', 'wesentlich', 'essential'),
+          Word('de_u55l3w6', 'implizit', 'implicit'),
+        ],
+        sentences: [
+          Sentence(
+            'Eine gute Zusammenfassung bewahrt den Kerngedanken und lässt die Nebensächlichkeiten weg.',
+            'A good summary keeps the central idea and leaves out the secondary details.',
+            extraIt: ['die Paraphrase', 'implizit'],
+            extraEn: ['paraphrase', 'implicit'],
+          ),
+          Sentence(
+            'Bei einer Paraphrase muss man den Gedanken umformulieren, ohne seinen Sinn zu verändern.',
+            'In a paraphrase, one must reformulate the concept without altering its meaning.',
+            extraIt: ['wesentlich', 'zusammenfassen'],
+            extraEn: ['essential', 'summarise'],
+          ),
+          Sentence(
+            'Die implizite Botschaft des Autors ist wichtiger als der ausdrückliche Text.',
+            'The implicit message of the author is more important than the explicit text.',
+            extraIt: ['die Zusammenfassung', 'zusammenfassen'],
+            extraEn: ['summary', 'reformulate'],
+          ),
+          Sentence(
+            'Um einen komplexen Aufsatz zusammenzufassen, muss man die These und die wichtigsten Belege erkennen.',
+            'To summarise a complex essay, one must identify the thesis and the main evidence.',
+            extraIt: ['die Paraphrase', 'implizit'],
+            extraEn: ['paraphrase', 'implicit'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u55l4',
+        title: 'Tenses and moods in context',
+        words: [
+          Word('de_u55l4w1', 'der Konjunktiv', 'subjunctive'),
+          Word('de_u55l4w2', 'der Konditional', 'conditional'),
+          Word('de_u55l4w3', 'das Plusquamperfekt', 'pluperfect'),
+          Word('de_u55l4w4', 'das Präteritum', 'remote past'),
+          Word('de_u55l4w5', 'das Partizip I', 'present participle'),
+          Word('de_u55l4w6', 'der Imperativ', 'imperative'),
+        ],
+        sentences: [
+          Sentence(
+            'Als er am Bahnhof ankam, war der Zug schon eine Stunde zuvor abgefahren.',
+            'When he reached the station, the train had already left an hour earlier.',
+            extraIt: ['der Konjunktiv', 'das Partizip I'],
+            extraEn: ['present participle', 'conditional'],
+          ),
+          Sentence(
+            'Hättest du auf den Rat gehört, wärst du heute nicht in Schwierigkeiten.',
+            'If you had listened to the advice, you would not be in trouble today.',
+            extraIt: ['der Imperativ', 'das Präteritum'],
+            extraEn: ['pluperfect', 'imperative'],
+          ),
+          Sentence(
+            'Hör gut zu, denn ich werde diese einfache Erklärung nie mehr wiederholen.',
+            'Listen carefully, because I will never repeat this simple explanation again.',
+            extraIt: ['das Partizip I', 'der Konditional'],
+            extraEn: ['pluperfect', 'subjunctive'],
+          ),
+          Sentence(
+            'Ich las gerade ein Buch, als plötzlich jemand heftig an die Tür klopfte.',
+            'I was reading a book when, suddenly, someone knocked hard on the door.',
+            extraIt: ['der Konjunktiv', 'der Konditional'],
+            extraEn: ['present participle', 'subjunctive'],
+          ),
+        ],
+      ),
+    ],
+  ),
+];

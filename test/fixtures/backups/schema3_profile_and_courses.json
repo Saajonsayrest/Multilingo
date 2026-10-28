@@ -1,0 +1,83 @@
+{
+ "app": "parlo",
+ "schema": 3,
+ "id": "1780000000000000",
+ "createdAt": "2026-06-01T09:00:00.000Z",
+ "label": "Phone",
+ "kind": "manual",
+ "appVersion": "0.2.0",
+ "checksum": "955aa50c",
+ "activeCourse": "it",
+ "profile": {
+  "onboarded": true,
+  "name": "Giulia",
+  "dailyGoalXp": 30,
+  "soundOn": false,
+  "hapticsOn": true,
+  "speechOn": true,
+  "themeMode": "dark",
+  "xp": 1250,
+  "xpByDay": {
+   "2026-02-27": 40,
+   "2026-02-28": 60
+  },
+  "streak": 12,
+  "longestStreak": 20,
+  "lastActiveDay": "2026-02-28",
+  "freezes": 1,
+  "gems": 340,
+  "hearts": 4,
+  "heartsStamp": 1772000000000,
+  "xpBoostUntil": 0,
+  "questDay": "2026-02-28",
+  "questProgress": {
+   "xp20": 12
+  },
+  "questClaimed": [],
+  "achievements": [
+   "first"
+  ],
+  "achievementsClaimed": [],
+  "leagueTier": 2,
+  "leagueWeek": "2026-02-23",
+  "lastLeagueResult": "promoted:2"
+ },
+ "courses": {
+  "it": {
+   "level": "intermediate",
+   "completedLessons": [
+    "u1l1",
+    "u1l2",
+    "u2l1"
+   ],
+   "lessonRuns": {
+    "u1l1": 2
+   },
+   "perfectLessons": 4,
+   "storiesDone": [
+    "cafe"
+   ],
+   "passedLevels": [
+    "A1"
+   ],
+   "checkpointBest": {
+    "A1": 90
+   },
+   "wordBox": {
+    "u1l1w1": 3
+   },
+   "wordDue": {
+    "u1l1w1": "2026-03-05"
+   },
+   "mistakes": [
+    "u1l1w2"
+   ],
+   "wordsCorrect": 57
+  },
+  "es": {
+   "completedLessons": [
+    "es1"
+   ]
+  }
+ }
+}

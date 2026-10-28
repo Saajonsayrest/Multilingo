@@ -1,0 +1,336 @@
+import '../../domain/models.dart';
+
+const List<UnitDef> deUnitsC1c = [
+  UnitDef(
+    id: 'de_u46',
+    title: 'Many Germanies',
+    subtitle: 'Regions and dialects',
+    level: 'C1',
+    colorValue: 0xFF00CD9C,
+    guide: [
+      'Germany has many regional words. Standard German (Hochdeutsch) is used in schools, the news and official documents.',
+      'Dialects developed in each region, so some are hard to follow even for other Germans. Swabian and Bavarian differ a lot from standard German.',
+      "Standard German grew mainly from the East Central German of the Meissen chancery, helped by Martin Luther's Bible translation.",
+    ],
+    lessons: [
+      LessonDef(
+        id: 'de_u46l1',
+        title: 'North, centre and south',
+        words: [
+          Word('de_u46l1w1', 'nördlich', 'northern'),
+          Word('de_u46l1w2', 'südlich', 'southern'),
+          Word('de_u46l1w3', 'die Ebene', 'plain'),
+          Word('de_u46l1w4', 'das Hinterland', 'inland area'),
+          Word('de_u46l1w5', 'die Küste', 'coastline'),
+          Word('de_u46l1w6', 'die Hochebene', 'plateau'),
+        ],
+        sentences: [
+          Sentence(
+            'Obwohl der Norden stärker industrialisiert ist, besitzt der Süden Küsten von außergewöhnlicher Schönheit.',
+            'Although the North is more industrialized, the South has coastlines of extraordinary beauty.',
+            extraIt: ['daher', 'Berge'],
+            extraEn: ['however', 'mountains'],
+          ),
+          Sentence(
+            'Ich wünschte, du würdest das Hinterland Mecklenburgs besuchen, wo die Ebenen dünn besiedelt sind.',
+            'I would like you to visit inland Mecklenburg, where the plains are sparsely populated.',
+            extraIt: ['Küste', 'Meer'],
+            extraEn: ['mountains', 'coastal'],
+          ),
+          Sentence(
+            'Der Frankenwein wird seit Jahrhunderten in den Hügeln Unterfrankens angebaut.',
+            'Franconian wine has been grown for centuries in the hills of Lower Franconia.',
+            extraIt: ['Nordsee', 'Ebene'],
+            extraEn: ['sea', 'mountains'],
+          ),
+          Sentence(
+            'Obwohl Bayern alpin geprägt ist, bevorzugen viele Touristen die Ostseeküste.',
+            'Although Bavaria is alpine, many tourists prefer the Baltic coastline.',
+            extraIt: ['Gebirge', 'Meer'],
+            extraEn: ['because', 'plains'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u46l2',
+        title: 'Regional words',
+        words: [
+          Word('de_u46l2w1', 'die Wassermelone', 'watermelon'),
+          Word('de_u46l2w2', 'die Semmel', 'regional word for bread roll, in Bavaria'),
+          Word('de_u46l2w3', 'der Bub', 'boy, in Bavaria'),
+          Word('de_u46l2w4', 'der Steppke', 'little boy, in Berlin'),
+          Word('de_u46l2w5', 'das Mädle', 'girl, in Swabia'),
+          Word('de_u46l2w6', 'der Vadder', 'dad, in Berlin'),
+        ],
+        sentences: [
+          Sentence(
+            'Auch wenn das Wort Bub typisch für Bayern ist, wird es in vielen anderen Regionen verstanden.',
+            'Even though the word Bub is typical of Bavaria, it is understood in many other regions.',
+            extraIt: ['Dialekt', 'sicherlich'],
+            extraEn: ['dialect', 'standard'],
+          ),
+          Sentence(
+            'Wenn ein Berliner das Wort Steppke benutzte, würde ich verstehen, dass er von einem kleinen Jungen spricht.',
+            'If a Berliner used the word Steppke, I would understand that he was talking about a little boy.',
+            extraIt: ['Mädchen', 'Mutter'],
+            extraEn: ['girl', 'father'],
+          ),
+          Sentence(
+            'Viele regionale Wörter werden von Sprachwissenschaftlern untersucht, weil sie Spuren des Lateinischen bewahren.',
+            'Many regional words are studied by linguists because they keep traces of Latin.',
+            extraIt: ['moderne', 'Lehrer'],
+            extraEn: ['teachers', 'modern'],
+          ),
+          Sentence(
+            'Falls du jemals nach München kämst, würde ich dir raten, zum Frühstück eine Semmel zu bestellen.',
+            'If you ever came to Munich, I would recommend ordering a bread roll for breakfast.',
+            extraIt: ['Winter', 'Abend'],
+            extraEn: ['winter', 'Berlin'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u46l3',
+        title: 'Minority languages',
+        words: [
+          Word('de_u46l3w1', 'der Dialekt', 'dialect'),
+          Word('de_u46l3w2', 'die Sprachminderheit', 'linguistic minority'),
+          Word('de_u46l3w3', 'die Muttersprache', 'mother tongue'),
+          Word('de_u46l3w4', 'die Zweisprachigkeit', 'bilingualism'),
+          Word('de_u46l3w5', 'der Sprecher', 'speaker'),
+          Word('de_u46l3w6', 'der Schutz', 'protection'),
+        ],
+        sentences: [
+          Sentence(
+            'Obwohl der Dialekt oft als minderwertig gilt, ist er ein wertvoller Teil unserer Identität.',
+            'Although dialect is often considered inferior, it is a precious part of our identity.',
+            extraIt: ['überlegen', 'Gespräch'],
+            extraEn: ['superior', 'language'],
+          ),
+          Sentence(
+            'Sobald die Sprecher der Minderheit einen offiziellen Schutz erhalten, gewinnt die Sprache wieder an Kraft.',
+            'As soon as the speakers of the minority obtain official protection, the language regains strength.',
+            extraIt: ['verlieren', 'Wörter'],
+            extraEn: ['loses', 'words'],
+          ),
+          Sentence(
+            'Die Zweisprachigkeit wird in den Schulen gefördert, damit die Kinder ihre Muttersprache behalten.',
+            'Bilingualism is encouraged in schools so that children keep their mother tongue.',
+            extraIt: ['Einsprachigkeit', 'Familie'],
+            extraEn: ['teachers', 'parents'],
+          ),
+          Sentence(
+            'Wäre der Schutz gesetzlich garantiert, wären die Sprecher stolzer.',
+            'If protection were guaranteed by law, the speakers would be prouder.',
+            extraIt: ['trotzdem', 'beschämt'],
+            extraEn: ['however', 'ashamed'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u46l4',
+        title: 'History of German',
+        words: [
+          Word('de_u46l4w1', 'die Volkssprache', 'vernacular'),
+          Word('de_u46l4w2', 'das Latein', 'Latin'),
+          Word('de_u46l4w3', 'die Göttliche Komödie', 'Divine Comedy'),
+          Word('de_u46l4w4', 'das Ostmitteldeutsche', 'East Central German'),
+          Word('de_u46l4w5', 'die Einigung', 'unification'),
+          Word('de_u46l4w6', 'die Schriftsprache', 'literary language'),
+        ],
+        sentences: [
+          Sentence(
+            'Das Latein entwickelte sich zu verschiedenen Volkssprachen, und das Ostmitteldeutsche wurde zur Grundlage des Hochdeutschen.',
+            'Latin developed into various vernaculars, and East Central German became the basis of standard German.',
+            extraIt: ['Griechisch', 'Französisch'],
+            extraEn: ['Greek', 'French'],
+          ),
+          Sentence(
+            'Dante schrieb die Göttliche Komödie in der florentinischen Volkssprache, obwohl diese noch als geringer galt als das Latein.',
+            'Dante wrote the Divine Comedy in the Florentine vernacular, although it was still considered inferior to Latin.',
+            extraIt: ['Griechisch', 'Plattdeutsch'],
+            extraEn: ['Greek', 'Bavarian'],
+          ),
+          Sentence(
+            'Nach der Einigung wurde das Hochdeutsche in allen Schulen gelehrt, und der Rundfunk trug später zu seiner Verbreitung bei.',
+            'After unification standard German was taught in all schools, and radio later helped spread it.',
+            extraIt: ['gesprochen', 'Arabisch'],
+            extraEn: ['spoken', 'Arabic'],
+          ),
+          Sentence(
+            'Obwohl viele Schriftsteller noch Dialekt verwenden, bleibt die Schriftsprache ein wichtiger Bezugspunkt.',
+            'Although many writers still use dialect, the literary language remains a point of reference.',
+            extraIt: ['schreiben', 'Publikum'],
+            extraEn: ['readers', 'audience'],
+          ),
+        ],
+      ),
+    ],
+  ),
+  UnitDef(
+    id: 'de_u47',
+    title: 'Professional German',
+    subtitle: 'Writing and negotiating',
+    level: 'C1',
+    colorValue: 0xFFFF86D0,
+    guide: [
+      'In formal emails, start with Sehr geehrte or Sehr geehrter, followed by a title and a name, such as Frau Dr. Lang. End with Mit freundlichen Grüßen.',
+      'With people you do not know well, use the formal Sie form. In writing, Sie, Ihnen and Ihr always start with a capital letter. Sollte can open a polished conditional sentence with the verb first.',
+      'In business talks, Germans often value clear facts and a direct answer. A calm and polite tone helps when you handle objections.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'de_u47l1',
+        title: 'Formal emails',
+        words: [
+          Word('de_u47l1w1', 'in der Anlage', 'attached'),
+          Word('de_u47l1w2', 'unter Bezugnahme auf', 'with reference to'),
+          Word('de_u47l1w3', 'sehr geehrte', 'dear'),
+          Word('de_u47l1w4', 'wir freuen uns auf Ihre Antwort', 'looking forward to your reply'),
+          Word('de_u47l1w5', 'Mit freundlichen Grüßen', 'kind regards'),
+          Word('de_u47l1w6', 'Hochachtungsvoll', 'yours faithfully'),
+        ],
+        sentences: [
+          Sentence(
+            'Sehr geehrte Frau Dr. Lang, unter Bezugnahme auf Ihre Anfrage senden wir Ihnen die Unterlagen in der Anlage.',
+            'Dear Dr. Lang, with reference to your request, we are attaching the documentation.',
+            extraIt: ['danken', 'weiterleiten'],
+            extraEn: ['thanking', 'forward'],
+          ),
+          Sentence(
+            'Wir freuen uns auf Ihre Rückmeldung und verbleiben mit freundlichen Grüßen.',
+            'We look forward to your reply and send our kind regards.',
+            extraIt: ['Mahnung', 'unterschreiben'],
+            extraEn: ['sincerely', 'thanks'],
+          ),
+          Sentence(
+            'Sollte der Vorschlag nicht Ihren Vorstellungen entsprechen, würden wir uns freuen, gemeinsam darüber zu sprechen.',
+            'Should the proposal not be to your liking, we would be glad to discuss it together.',
+            extraIt: ['Zustimmung', 'Verzögerung'],
+            extraEn: ['approval', 'delay'],
+          ),
+          Sentence(
+            'Wir bitten Sie freundlich, den Erhalt bis Freitag zu bestätigen, damit wir fortfahren können.',
+            'We kindly ask you to confirm receipt by Friday, so that we can proceed.',
+            extraIt: ['löschen', 'ablehnen'],
+            extraEn: ['cancel', 'refuse'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u47l2',
+        title: 'Proposals and reports',
+        words: [
+          Word('de_u47l2w1', 'der Vorschlag', 'proposal'),
+          Word('de_u47l2w2', 'der Bericht', 'report'),
+          Word('de_u47l2w3', 'das Protokoll', 'minutes'),
+          Word('de_u47l2w4', 'der Entwurf', 'draft'),
+          Word('de_u47l2w5', 'die Tagesordnung', 'agenda'),
+          Word('de_u47l2w6', 'genehmigen', 'to approve'),
+        ],
+        sentences: [
+          Sentence(
+            'Wäre das Protokoll genehmigt, würde der Entwurf bis Ende der Woche verschickt.',
+            'If the minutes were approved, the draft would be sent by the end of the week.',
+            extraIt: ['abgelehnt', 'Verzögerung'],
+            extraEn: ['rejected', 'delay'],
+          ),
+          Sentence(
+            'Der Bericht, der vom Verantwortlichen verfasst wurde, zeigt Probleme auf, die so bald wie möglich behoben werden sollten.',
+            'The report, written by the manager, highlights issues that should be solved as soon as possible.',
+            extraIt: ['Protokoll', 'Vorschlag'],
+            extraEn: ['draft', 'proposal'],
+          ),
+          Sentence(
+            'Das Protokoll der Sitzung muss vom Vorsitzenden unterschrieben werden, damit es gültig ist.',
+            'The minutes of the meeting must be signed by the chairman so that they are valid.',
+            extraIt: ['genehmigt', 'Tagesordnung'],
+            extraEn: ['agenda', 'approved'],
+          ),
+          Sentence(
+            'Wir bitten darum, dass die Tagesordnung vor Beginn der Diskussion über den Vorschlag genehmigt wird.',
+            'We ask that the agenda be approved before the discussion on the proposal begins.',
+            extraIt: ['abgelehnt', 'Protokoll'],
+            extraEn: ['rejected', 'minutes'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u47l3',
+        title: 'Negotiating and objections',
+        words: [
+          Word('de_u47l3w1', 'die Verhandlung', 'negotiation'),
+          Word('de_u47l3w2', 'der Einwand', 'objection'),
+          Word('de_u47l3w3', 'das Zugeständnis', 'concession'),
+          Word('de_u47l3w4', 'das Gegenangebot', 'counteroffer'),
+          Word('de_u47l3w5', 'der Verhandlungsspielraum', 'room to manoeuvre'),
+          Word('de_u47l3w6', 'die Vereinbarung', 'agreement'),
+        ],
+        sentences: [
+          Sentence(
+            'Würde der Kunde einen Einwand zum Preis vorbringen, sollten wir ein gezieltes Zugeständnis anbieten.',
+            'If the client raised an objection about the price, we should offer a targeted concession.',
+            extraIt: ['Rabatt', 'Lieferung'],
+            extraEn: ['discount', 'delivery'],
+          ),
+          Sentence(
+            'Obwohl die Verhandlung komplex ist, sind wir bereit, ein vernünftiges Gegenangebot zu prüfen.',
+            'Although the negotiation is complex, we are willing to consider a reasonable counteroffer.',
+            extraIt: ['Vereinbarung', 'Druck'],
+            extraEn: ['agreement', 'pressure'],
+          ),
+          Sentence(
+            'Würde der Lieferant unsere Bedingungen akzeptieren, könnte der Vertrag schon im Mai unterzeichnet werden.',
+            'If the supplier accepted our terms, the contract could be signed as early as May.',
+            extraIt: ['ablehnte', 'Juni'],
+            extraEn: ['rejected', 'June'],
+          ),
+          Sentence(
+            'Wir müssen den Verhandlungsspielraum berücksichtigen, der uns noch bleibt, denn eine dauerhafte Vereinbarung erfordert Geduld.',
+            'We must take into account our remaining room to manoeuvre, because a lasting agreement needs patience.',
+            extraIt: ['Hindernis', 'Eile'],
+            extraEn: ['rush', 'obstacle'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'de_u47l4',
+        title: 'Presentations',
+        words: [
+          Word('de_u47l4w1', 'die Folie', 'slide'),
+          Word('de_u47l4w2', 'die Gliederung', 'outline'),
+          Word('de_u47l4w3', 'das Publikum', 'audience'),
+          Word('de_u47l4w4', 'die Rede', 'speech'),
+          Word('de_u47l4w5', 'die Pause', 'pause'),
+          Word('de_u47l4w6', 'überzeugen', 'to persuade'),
+        ],
+        sentences: [
+          Sentence(
+            'Bevor es losgeht, sollte der Redner prüfen, ob jede Folie gut lesbar ist.',
+            'Before starting, it is advisable that the speaker check that every slide is readable.',
+            extraIt: ['Gliederung', 'Publikum'],
+            extraEn: ['outline', 'audience'],
+          ),
+          Sentence(
+            'Das Publikum wird besser eingebunden, wenn der Redner während seiner Rede offene Fragen stellt.',
+            'The audience is better engaged if the speaker asks open questions during the speech.',
+            extraIt: ['Folien', 'Pause'],
+            extraEn: ['slides', 'pause'],
+          ),
+          Sentence(
+            'Um das Publikum zu überzeugen, wäre es wirksamer gewesen, die überflüssigen Folien zu streichen.',
+            'To persuade the audience, it would have been more effective to cut the superfluous slides.',
+            extraIt: ['wiederholen', 'Gliederung'],
+            extraEn: ['repeat', 'outline'],
+          ),
+          Sentence(
+            'Nach einer kurzen Pause setzt der Redner seine Rede fort und lässt Raum für Fragen.',
+            'After a short pause, the speaker will resume the talk and leave room for questions.',
+            extraIt: ['Mikrofon', 'Schluss'],
+            extraEn: ['microphone', 'conclusion'],
+          ),
+        ],
+      ),
+    ],
+  ),
+];

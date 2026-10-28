@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The widgets pick Pip's picture by name at run time, so the resource
+     shrinker must not remove the unreferenced ones. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/pip_*" />

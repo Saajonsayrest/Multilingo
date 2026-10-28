@@ -1,0 +1,336 @@
+import '../../domain/models.dart';
+
+const List<UnitDef> unitsC1c = [
+  UnitDef(
+    id: 'u46',
+    title: 'Many Italies',
+    subtitle: 'Regions and dialects',
+    level: 'C1',
+    colorValue: 0xFF00CD9C,
+    guide: [
+      'Italy has many regional words. Standard Italian is used in schools, the news and official documents.',
+      'Dialects developed from Latin in different ways in each region, so some are hard to follow even for other Italians.',
+      'Standard Italian grew mainly from the Tuscan of Florence, helped by writers such as Dante.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'u46l1',
+        title: 'North, centre and south',
+        words: [
+          Word('u46l1w1', 'settentrionale', 'northern'),
+          Word('u46l1w2', 'meridionale', 'southern'),
+          Word('u46l1w3', 'pianura', 'plain'),
+          Word('u46l1w4', 'entroterra', 'inland area'),
+          Word('u46l1w5', 'litorale', 'coastline'),
+          Word('u46l1w6', 'altopiano', 'plateau'),
+        ],
+        sentences: [
+          Sentence(
+            'Sebbene il Nord sia più industrializzato, il Sud possiede coste di straordinaria bellezza.',
+            'Although the North is more industrialized, the South has coastlines of extraordinary beauty.',
+            extraIt: ['quindi', 'montagne'],
+            extraEn: ['however', 'mountains'],
+          ),
+          Sentence(
+            "Vorrei che tu visitassi l'entroterra sardo, dove le pianure sono poco abitate.",
+            'I would like you to visit inland Sardinia, where the plains are sparsely populated.',
+            extraIt: ['ascoltassi', 'mare'],
+            extraEn: ['mountains', 'coastal'],
+          ),
+          Sentence(
+            "Il vino toscano viene prodotto da secoli nelle colline dell'Italia centrale.",
+            'Tuscan wine has been produced for centuries in the hills of central Italy.',
+            extraIt: ['montagne', 'mare'],
+            extraEn: ['sea', 'mountains'],
+          ),
+          Sentence(
+            'Benché il Piemonte sia alpino, molti turisti preferiscono il litorale ligure.',
+            'Although Piedmont is alpine, many tourists prefer the Ligurian coastline.',
+            extraIt: ['montagna', 'mare'],
+            extraEn: ['because', 'plains'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u46l2',
+        title: 'Regional words',
+        words: [
+          Word('u46l2w1', 'cocomero', 'watermelon'),
+          Word('u46l2w2', 'anguria', 'regional word for watermelon'),
+          Word('u46l2w3', 'bocia', 'kid, in Veneto'),
+          Word('u46l2w4', 'guaglione', 'boy, in Naples'),
+          Word('u46l2w5', 'picciotto', 'young man, in Sicily'),
+          Word('u46l2w6', 'babbo', 'dad, in Tuscany'),
+        ],
+        sentences: [
+          Sentence(
+            'Anche se bocia è tipico del Veneto, viene capito in molte altre regioni.',
+            'Even though bocia is typical of Veneto, it is understood in many other regions.',
+            extraIt: ['dialetto', 'sicuramente'],
+            extraEn: ['dialect', 'standard'],
+          ),
+          Sentence(
+            'Se un napoletano dicesse guaglione, capirei che sta parlando di un ragazzo.',
+            'If a Neapolitan said guaglione, I would understand that he was talking about a boy.',
+            extraIt: ['bambina', 'madre'],
+            extraEn: ['girl', 'father'],
+          ),
+          Sentence(
+            'Molte parole regionali vengono studiate dai linguisti, perché conservano tracce del latino.',
+            'Many regional words are studied by linguists because they keep traces of Latin.',
+            extraIt: ['moderne', 'insegnanti'],
+            extraEn: ['teachers', 'modern'],
+          ),
+          Sentence(
+            'Qualora tu andassi a Palermo, ti consiglierei di ordinare un cocomero fresco in estate.',
+            'If you ever went to Palermo, I would recommend ordering a fresh watermelon in summer.',
+            extraIt: ['inverno', 'mare'],
+            extraEn: ['winter', 'Naples'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u46l3',
+        title: 'Minority languages',
+        words: [
+          Word('u46l3w1', 'dialetto', 'dialect'),
+          Word('u46l3w2', 'minoranza linguistica', 'linguistic minority'),
+          Word('u46l3w3', 'lingua madre', 'mother tongue'),
+          Word('u46l3w4', 'bilinguismo', 'bilingualism'),
+          Word('u46l3w5', 'parlante', 'speaker'),
+          Word('u46l3w6', 'tutela', 'protection'),
+        ],
+        sentences: [
+          Sentence(
+            'Sebbene il dialetto sia spesso considerato inferiore, è una parte preziosa della nostra identità.',
+            'Although dialect is often considered inferior, it is a precious part of our identity.',
+            extraIt: ['superiore', 'dialogo'],
+            extraEn: ['superior', 'language'],
+          ),
+          Sentence(
+            'Non appena i parlanti della minoranza ottengono una tutela ufficiale, la lingua riprende vigore.',
+            'As soon as the speakers of the minority obtain official protection, the language regains strength.',
+            extraIt: ['perdono', 'parole'],
+            extraEn: ['loses', 'words'],
+          ),
+          Sentence(
+            'Il bilinguismo viene incoraggiato nelle scuole, affinché i bambini mantengano la lingua madre.',
+            'Bilingualism is encouraged in schools so that children keep their mother tongue.',
+            extraIt: ['monolinguismo', 'famiglia'],
+            extraEn: ['teachers', 'parents'],
+          ),
+          Sentence(
+            'Qualora la tutela venisse garantita dalla legge, i parlanti sarebbero più orgogliosi.',
+            'If protection were guaranteed by law, the speakers would be prouder.',
+            extraIt: ['tuttavia', 'orgoglioso'],
+            extraEn: ['however', 'ashamed'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u46l4',
+        title: 'History of Italian',
+        words: [
+          Word('u46l4w1', 'volgare', 'vernacular'),
+          Word('u46l4w2', 'latino', 'Latin'),
+          Word('u46l4w3', 'Divina Commedia', 'Divine Comedy'),
+          Word('u46l4w4', 'toscano', 'Tuscan'),
+          Word('u46l4w5', 'unificazione', 'unification'),
+          Word('u46l4w6', 'lingua letteraria', 'literary language'),
+        ],
+        sentences: [
+          Sentence(
+            "Il latino si è trasformato nei vari volgari, e il toscano è diventato la base dell'italiano.",
+            'Latin transformed into various vernaculars, and Tuscan became the basis of Italian.',
+            extraIt: ['greco', 'francese'],
+            extraEn: ['Greek', 'French'],
+          ),
+          Sentence(
+            'Dante scrisse la Divina Commedia in volgare fiorentino, benché fosse ancora considerato inferiore al latino.',
+            'Dante wrote the Divine Comedy in Florentine vernacular, although it was still considered inferior to Latin.',
+            extraIt: ['greco', 'napoletano'],
+            extraEn: ['Greek', 'Venetian'],
+          ),
+          Sentence(
+            "Dopo l'unificazione l'italiano fu insegnato nelle scuole, e la televisione ne accelerò la diffusione.",
+            'After unification Italian was taught in schools, and television accelerated its spread.',
+            extraIt: ['parlata', 'arabo'],
+            extraEn: ['spoken', 'Arabic'],
+          ),
+          Sentence(
+            'Sebbene molti scrittori usino ancora il dialetto, la lingua letteraria resta un punto di riferimento.',
+            'Although many writers still use dialect, the literary language remains a point of reference.',
+            extraIt: ['scrivono', 'pubblico'],
+            extraEn: ['readers', 'audience'],
+          ),
+        ],
+      ),
+    ],
+  ),
+  UnitDef(
+    id: 'u47',
+    title: 'Professional Italian',
+    subtitle: 'Writing and negotiating',
+    level: 'C1',
+    colorValue: 0xFFFF86D0,
+    guide: [
+      'In formal emails, start with Gentile followed by a title such as Dottore or Signora. End with Cordiali saluti.',
+      'With people you do not know well, use the formal Lei form and Suo or Sua in writing. Qualora is a polished way to open a conditional sentence.',
+      'In business talks, Italians often value trust before details. A calm and polite tone helps when you handle objections.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'u47l1',
+        title: 'Formal emails',
+        words: [
+          Word('u47l1w1', 'in allegato', 'attached'),
+          Word('u47l1w2', 'in riferimento a', 'with reference to'),
+          Word('u47l1w3', 'gentile', 'dear'),
+          Word('u47l1w4', 'restiamo in attesa', 'looking forward to your reply'),
+          Word('u47l1w5', 'cordiali saluti', 'kind regards'),
+          Word('u47l1w6', 'distinti saluti', 'yours faithfully'),
+        ],
+        sentences: [
+          Sentence(
+            'Gentile Dottore, in riferimento alla sua richiesta, le inviamo in allegato la documentazione.',
+            'Dear Doctor, with reference to your request, we are attaching the documentation.',
+            extraIt: ['ringraziamo', 'inoltriamo'],
+            extraEn: ['thanking', 'forward'],
+          ),
+          Sentence(
+            'Restiamo in attesa di un suo cenno e porgiamo cordiali saluti.',
+            'We look forward to your reply and send our kind regards.',
+            extraIt: ['sollecito', 'firmiamo'],
+            extraEn: ['sincerely', 'thanks'],
+          ),
+          Sentence(
+            'Qualora la proposta non fosse di Suo gradimento, saremmo lieti di discuterne insieme.',
+            'Should the proposal not be to your liking, we would be glad to discuss it together.',
+            extraIt: ['accettazione', 'ritardo'],
+            extraEn: ['approval', 'delay'],
+          ),
+          Sentence(
+            'Le chiediamo gentilmente di confermare la ricezione entro venerdì, per poter procedere.',
+            'We kindly ask you to confirm receipt by Friday, so that we can proceed.',
+            extraIt: ['cancellare', 'rifiutare'],
+            extraEn: ['cancel', 'refuse'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u47l2',
+        title: 'Proposals and reports',
+        words: [
+          Word('u47l2w1', 'proposta', 'proposal'),
+          Word('u47l2w2', 'relazione', 'report'),
+          Word('u47l2w3', 'verbale', 'minutes'),
+          Word('u47l2w4', 'bozza', 'draft'),
+          Word('u47l2w5', 'ordine del giorno', 'agenda'),
+          Word('u47l2w6', 'approvare', 'to approve'),
+        ],
+        sentences: [
+          Sentence(
+            'Qualora il verbale venisse approvato, la bozza sarebbe inviata entro fine settimana.',
+            'If the minutes were approved, the draft would be sent by the end of the week.',
+            extraIt: ['respinto', 'ritardo'],
+            extraEn: ['rejected', 'delay'],
+          ),
+          Sentence(
+            'La relazione, che è stata redatta dal responsabile, evidenzia criticità che andrebbero risolte al più presto.',
+            'The report, written by the manager, highlights issues that should be solved as soon as possible.',
+            extraIt: ['verbale', 'proposta'],
+            extraEn: ['draft', 'proposal'],
+          ),
+          Sentence(
+            'Il verbale della riunione deve essere firmato dal presidente, affinché sia valido.',
+            'The minutes of the meeting must be signed by the chairman so that they are valid.',
+            extraIt: ['approvato', 'ordine'],
+            extraEn: ['agenda', 'approved'],
+          ),
+          Sentence(
+            "Si chiede che l'ordine del giorno sia approvato prima di iniziare la discussione sulla proposta.",
+            'We ask that the agenda be approved before the discussion on the proposal begins.',
+            extraIt: ['respinto', 'verbale'],
+            extraEn: ['rejected', 'minutes'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u47l3',
+        title: 'Negotiating and objections',
+        words: [
+          Word('u47l3w1', 'trattativa', 'negotiation'),
+          Word('u47l3w2', 'obiezione', 'objection'),
+          Word('u47l3w3', 'concessione', 'concession'),
+          Word('u47l3w4', 'controproposta', 'counteroffer'),
+          Word('u47l3w5', 'margine di manovra', 'room to manoeuvre'),
+          Word('u47l3w6', 'accordo', 'agreement'),
+        ],
+        sentences: [
+          Sentence(
+            "Se il cliente presentasse un'obiezione sul prezzo, dovremmo offrire una concessione mirata.",
+            'If the client raised an objection about the price, we should offer a targeted concession.',
+            extraIt: ['sconto', 'consegna'],
+            extraEn: ['discount', 'delivery'],
+          ),
+          Sentence(
+            'Sebbene la trattativa sia complessa, siamo disposti a valutare una controproposta ragionevole.',
+            'Although the negotiation is complex, we are willing to consider a reasonable counteroffer.',
+            extraIt: ['accordo', 'pressione'],
+            extraEn: ['agreement', 'pressure'],
+          ),
+          Sentence(
+            'Qualora il fornitore accettasse le nostre condizioni, il contratto potrebbe essere firmato già a maggio.',
+            'If the supplier accepted our terms, the contract could be signed as early as May.',
+            extraIt: ['rifiutasse', 'giugno'],
+            extraEn: ['rejected', 'June'],
+          ),
+          Sentence(
+            'Dobbiamo tenere conto del margine di manovra che ci resta, perché un accordo duraturo richiede pazienza.',
+            'We must take into account our remaining room to manoeuvre, because a lasting agreement needs patience.',
+            extraIt: ['ostacolo', 'fretta'],
+            extraEn: ['rush', 'obstacle'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u47l4',
+        title: 'Presentations',
+        words: [
+          Word('u47l4w1', 'diapositiva', 'slide'),
+          Word('u47l4w2', 'scaletta', 'outline'),
+          Word('u47l4w3', 'pubblico', 'audience'),
+          Word('u47l4w4', 'intervento', 'speech'),
+          Word('u47l4w5', 'pausa', 'pause'),
+          Word('u47l4w6', 'convincere', 'to persuade'),
+        ],
+        sentences: [
+          Sentence(
+            "Prima di iniziare, è opportuno che il relatore verifichi che ogni diapositiva sia leggibile.",
+            'Before starting, it is advisable that the speaker check that every slide is readable.',
+            extraIt: ['scaletta', 'pubblico'],
+            extraEn: ['outline', 'audience'],
+          ),
+          Sentence(
+            "Il pubblico viene coinvolto meglio se il relatore pone domande aperte durante l'intervento.",
+            'The audience is better engaged if the speaker asks open questions during the speech.',
+            extraIt: ['diapositive', 'pausa'],
+            extraEn: ['slides', 'pause'],
+          ),
+          Sentence(
+            'Per convincere il pubblico, sarebbe stato più efficace tagliare le diapositive superflue.',
+            'To persuade the audience, it would have been more effective to cut the superfluous slides.',
+            extraIt: ['ripetere', 'scaletta'],
+            extraEn: ['repeat', 'outline'],
+          ),
+          Sentence(
+            'Dopo una breve pausa, il relatore riprenderà il discorso, lasciando che le domande emergano.',
+            'After a short pause, the speaker will resume the talk, letting the questions emerge.',
+            extraIt: ['conclusione', 'microfono'],
+            extraEn: ['microphone', 'conclusion'],
+          ),
+        ],
+      ),
+    ],
+  ),
+];

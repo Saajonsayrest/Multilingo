@@ -1,0 +1,61 @@
+import '../../domain/models.dart';
+
+const List<AlphabetEntry> deAlphabet = [
+  // The 26 letters of the German alphabet.
+  AlphabetEntry('A', 'ah as in father, short or long', 'Apfel', 'apple'),
+  AlphabetEntry('B', 'b as in book, at the start of a word', 'Buch', 'book'),
+  AlphabetEntry('C', 'k as in cat (in loanwords like Computer), or ts before e, i', 'Computer', 'computer'),
+  AlphabetEntry('D', 'd as in dog, at the start of a word', 'Dorf', 'village'),
+  AlphabetEntry('E', 'eh as in bed (short), or ay as in say (long)', 'Essen', 'food'),
+  AlphabetEntry('F', 'f as in fish', 'Fenster', 'window'),
+  AlphabetEntry('G', 'g as in go, always hard, even before e and i', 'Garten', 'garden'),
+  AlphabetEntry('H', 'breathy h at the start of a word, silent after a vowel (it only makes the vowel long)', 'Haus', 'house'),
+  AlphabetEntry('I', 'ee as in see (long), or i as in bit (short)', 'Insel', 'island'),
+  AlphabetEntry('J', 'y as in yes', 'Jahr', 'year'),
+  AlphabetEntry('K', 'k as in kite', 'Kind', 'child'),
+  AlphabetEntry('L', 'l as in light', 'Licht', 'light'),
+  AlphabetEntry('M', 'm as in map', 'Mond', 'moon'),
+  AlphabetEntry('N', 'n as in net', 'Nacht', 'night'),
+  AlphabetEntry('O', 'oh as in go (long), or aw as in saw (short)', 'Ofen', 'oven'),
+  AlphabetEntry('P', 'p as in spin, with no puff of air', 'Park', 'park'),
+  AlphabetEntry('Q', 'kv, the k and v sounds together (always followed by u)', 'Qualle', 'jellyfish'),
+  AlphabetEntry('R', 'throat r, made at the back of the mouth, not rolled like Italian', 'Rot', 'red'),
+  AlphabetEntry('S', 'z as in zoo before a vowel, s as in sun elsewhere', 'Sonne', 'sun'),
+  AlphabetEntry('T', 't as in top, with no puff of air', 'Tisch', 'table'),
+  AlphabetEntry('U', 'oo as in food, short or long', 'Uhr', 'clock'),
+  AlphabetEntry('V', 'f as in far in most German words, v as in van in some loanwords', 'Vater', 'father'),
+  AlphabetEntry('W', 'v as in van', 'Wasser', 'water'),
+  AlphabetEntry('X', 'ks as in socks', 'Taxi', 'taxi'),
+  AlphabetEntry('Y', 'ü sound, like ee said with tightly rounded lips', 'Gymnastik', 'gymnastics'),
+  AlphabetEntry('Z', 'ts as in cats', 'Zeit', 'time'),
+
+  // The umlauts and the sharp s.
+  AlphabetEntry('Ä', 'eh as in bed (short), or ay as in say (long)', 'Mädchen', 'girl'),
+  AlphabetEntry('Ö', 'ur as in fur, but with rounded lips', 'schön', 'beautiful'),
+  AlphabetEntry('Ü', 'ee sound with tightly rounded lips, like saying ee with an oo shape', 'über', 'over, about'),
+  AlphabetEntry('ß', 'sharp s, sounds like ss (only after a long vowel or diphthong)', 'Straße', 'street'),
+
+  // Special spellings and sounds.
+  AlphabetEntry('CH after a, o, u, au', 'ch as in Scottish loch, a raspy sound at the back of the throat', 'Dach', 'roof'),
+  AlphabetEntry('CH after e, i, ä, ö, ü, consonants', 'soft ch, a hiss with the tongue near the roof of the mouth', 'ich', 'I'),
+  AlphabetEntry('SCH', 'sh as in shoe', 'Schule', 'school'),
+  AlphabetEntry('SP at start of word', 'shp, like the start of the word shpeel', 'Sport', 'sport'),
+  AlphabetEntry('ST at start of word', 'sht, like the start of the word shtick', 'Stadt', 'city, town'),
+  AlphabetEntry('EI', 'eye as in eye', 'Eis', 'ice cream'),
+  AlphabetEntry('IE', 'ee, long, as in see', 'Liebe', 'love'),
+  AlphabetEntry('EU / ÄU', 'oy as in boy', 'Freund', 'friend'),
+  AlphabetEntry('AU', 'ow as in cow', 'Frau', 'woman, Mrs'),
+  AlphabetEntry('PF', 'p and f together, pf, as in the start of pfft', 'Pferd', 'horse'),
+  AlphabetEntry('TSCH', 'ch as in church', 'Deutsch', 'German'),
+  AlphabetEntry('NG', 'ng as in singer, with no hard g after it', 'Junge', 'boy'),
+  AlphabetEntry('B, D, G at end of word', 'sounds like p, t, k, as in rap, bat, back', 'Tag', 'day'),
+  AlphabetEntry('Doubled consonant', 'short vowel before it, the consonant is said once', 'Mann', 'man'),
+  AlphabetEntry('AA', 'long ah, as in father, held longer', 'Staat', 'state, country'),
+  AlphabetEntry('Vowel + h or one consonant', 'the vowel is long, and the h is silent', 'Zahl', 'number'),
+  AlphabetEntry('ER at end of word', 'soft uh, as in the a in sofa, do not roll the r', 'Lehrer', 'teacher'),
+
+  // Stress: where the emphasis falls.
+  AlphabetEntry('Noun stress', 'stress the first part of most compound nouns', 'Flughafen', 'airport'),
+  AlphabetEntry('Separable prefix', 'stress the prefix, AN-kom-men', 'ankommen', 'to arrive'),
+  AlphabetEntry('Inseparable prefix', 'prefixes like ver- are not stressed, fer-SHTAY-en', 'verstehen', 'to understand'),
+];

@@ -1,0 +1,336 @@
+import '../../domain/models.dart';
+
+const List<UnitDef> unitsC2c = [
+  UnitDef(
+    id: 'u54',
+    title: 'Poetry',
+    subtitle: 'Verse and imagery',
+    level: 'C2',
+    colorValue: 0xFF00CD9C,
+    guide: [
+      'Italian poets often change the normal word order, so the verb or the adjective can come first. This is called inversione, and it helps the rhythm.',
+      "Elision joins a final vowel to the next word, as in l'ombra or un'onda. Poets also use troncamento, which shortens a word, as in bel giorno for bello giorno.",
+      'Use malinconia for a soft, thoughtful sadness, and rimpianto for regret about something that is past. Precise feeling words make a poem sound exact.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'u54l1',
+        title: 'Sea, night and memory',
+        words: [
+          Word('u54l1w1', 'mare', 'sea'),
+          Word('u54l1w2', 'notte', 'night'),
+          Word('u54l1w3', 'ricordo', 'memory'),
+          Word('u54l1w4', 'desiderio', 'longing'),
+          Word('u54l1w5', 'onda', 'wave'),
+          Word('u54l1w6', 'stella', 'star'),
+        ],
+        sentences: [
+          Sentence(
+            'Il mare sussurra una canzone antica nella notte fredda e silenziosa.',
+            'The sea whispers an ancient song in the cold and silent night.',
+            extraIt: ['ricordo', 'stella'],
+            extraEn: ['memory', 'wave'],
+          ),
+          Sentence(
+            'Il ricordo di te brilla come una stella lontana nel mio cuore.',
+            'The memory of you shines like a distant star in my heart.',
+            extraIt: ['onda', 'desiderio'],
+            extraEn: ['longing', 'sea'],
+          ),
+          Sentence(
+            "Un'onda leggera accarezza dolcemente la riva mentre il sole tramonta.",
+            'A gentle wave caresses the shore while the sun sets.',
+            extraIt: ['notte', 'ricordo'],
+            extraEn: ['night', 'memory'],
+          ),
+          Sentence(
+            'Il mio desiderio è tornare là dove la notte non finisce mai.',
+            'My longing is to return there, where the night never ends.',
+            extraIt: ['stella', 'mare'],
+            extraEn: ['sea', 'star'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u54l2',
+        title: 'Word order and elision',
+        words: [
+          Word('u54l2w1', 'inversione', 'inversion'),
+          Word('u54l2w2', 'elisione', 'elision'),
+          Word('u54l2w3', 'troncamento', 'truncation'),
+          Word('u54l2w4', 'verso', 'poetic line'),
+          Word('u54l2w5', 'rima', 'rhyme'),
+          Word('u54l2w6', 'ritmo', 'rhythm'),
+        ],
+        sentences: [
+          Sentence(
+            'Dolce è la sera, e il cuore stanco riposa finalmente.',
+            'Sweet is the evening, and the tired heart finally rests.',
+            extraIt: ['ritmo', 'elisione'],
+            extraEn: ['rhythm', 'verse'],
+          ),
+          Sentence(
+            "Il sole cala piano, e l'ombra scende sulle verdi colline.",
+            'The sun sinks gently, and the shadow falls over the green hills.',
+            extraIt: ['inversione', 'verso'],
+            extraEn: ['elision', 'truncation'],
+          ),
+          Sentence(
+            'Canta, anima mia, la dolce tenerezza di chi non dimentica mai.',
+            'Sing, my soul, the sweet tenderness of those who never forget.',
+            extraIt: ['ricordo', 'verso'],
+            extraEn: ['memory', 'verse'],
+          ),
+          Sentence(
+            "Non c'è più luce, ma resta il canto nel silenzio.",
+            'There is no more light, but the song remains in the silence.',
+            extraIt: ['rima', 'ritmo'],
+            extraEn: ['rhythm', 'rhyme'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u54l3',
+        title: 'Feeling with precision',
+        words: [
+          Word('u54l3w1', 'malinconia', 'melancholy'),
+          Word('u54l3w2', 'rimpianto', 'regret'),
+          Word('u54l3w3', 'struggimento', 'anguish'),
+          Word('u54l3w4', 'sollievo', 'relief'),
+          Word('u54l3w5', 'stupore', 'wonder'),
+          Word('u54l3w6', 'inquietudine', 'unease'),
+        ],
+        sentences: [
+          Sentence(
+            'Provo una malinconia dolce e quieta, più che una vera tristezza.',
+            'I feel a sweet and quiet melancholy, rather than true sadness.',
+            extraIt: ['sollievo', 'stupore'],
+            extraEn: ['relief', 'wonder'],
+          ),
+          Sentence(
+            'Il suo silenzio mi lascia un rimpianto che non si spegne.',
+            'Her silence leaves me a regret that will never fade away.',
+            extraIt: ['inquietudine', 'sollievo'],
+            extraEn: ['anguish', 'unease'],
+          ),
+          Sentence(
+            'Quando ti rivedo, provo uno stupore che mi toglie il respiro.',
+            'When I see you again, I feel a wonder that takes my breath away.',
+            extraIt: ['malinconia', 'rimpianto'],
+            extraEn: ['melancholy', 'regret'],
+          ),
+          Sentence(
+            'Il mio struggimento è così forte che mi sembra di annegare dentro.',
+            'My anguish is so strong that I feel as if I were drowning inside.',
+            extraIt: ['sollievo', 'stupore'],
+            extraEn: ['relief', 'wonder'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u54l4',
+        title: 'Reading the lines',
+        words: [
+          Word('u54l4w1', 'metafora', 'metaphor'),
+          Word('u54l4w2', 'simbolo', 'symbol'),
+          Word('u54l4w3', 'allusione', 'allusion'),
+          Word('u54l4w4', 'ambiguità', 'ambiguity'),
+          Word('u54l4w5', 'immagine', 'image'),
+          Word('u54l4w6', 'tono', 'tone'),
+        ],
+        sentences: [
+          Sentence(
+            'La metafora del fiume indica il tempo che non si ferma mai.',
+            'The metaphor of the river shows time that never stops.',
+            extraIt: ['simbolo', 'tono'],
+            extraEn: ['symbol', 'tone'],
+          ),
+          Sentence(
+            'Il simbolo della finestra chiusa suggerisce una solitudine che nessuno vede.',
+            'The symbol of the closed window suggests a loneliness that nobody sees.',
+            extraIt: ['immagine', 'allusione'],
+            extraEn: ['image', 'allusion'],
+          ),
+          Sentence(
+            "L'ambiguità del verso lascia al lettore la scelta del significato.",
+            'The ambiguity of the line leaves the reader the choice of meaning.',
+            extraIt: ['tono', 'metafora'],
+            extraEn: ['tone', 'metaphor'],
+          ),
+          Sentence(
+            'Il tono malinconico della poesia contrasta con la luce del mattino.',
+            'The melancholy tone of the poem contrasts with the morning light.',
+            extraIt: ['immagine', 'simbolo'],
+            extraEn: ['image', 'symbol'],
+          ),
+        ],
+      ),
+    ],
+  ),
+  UnitDef(
+    id: 'u55',
+    title: 'Mastery',
+    subtitle: 'Complex texts',
+    level: 'C2',
+    colorValue: 0xFFFF86D0,
+    guide: [
+      'Long argumentative sentences often use a main clause with several subordinate clauses. Check the mood of each verb, because sebbene and benché take the subjunctive.',
+      'Mix registers with care: pertanto and tuttavia suit formal writing, while insomma and allora suit everyday speech.',
+      'When you paraphrase, keep the logic of the original and change only the words. A good summary keeps the main claim and drops the examples.',
+    ],
+    lessons: [
+      LessonDef(
+        id: 'u55l1',
+        title: 'Long arguments',
+        words: [
+          Word('u55l1w1', 'tesi', 'thesis'),
+          Word('u55l1w2', 'argomentazione', 'argument'),
+          Word('u55l1w3', 'premessa', 'premise'),
+          Word('u55l1w4', 'conclusione', 'conclusion'),
+          Word('u55l1w5', 'obiezione', 'objection'),
+          Word('u55l1w6', 'confutare', 'refute'),
+        ],
+        sentences: [
+          Sentence(
+            'Sebbene molti sostengano che la tecnologia liberi il tempo, la realtà mostra spesso il contrario.',
+            'Although many claim that technology frees up time, reality often shows the opposite.',
+            extraIt: ['tesi', 'obiezione'],
+            extraEn: ['thesis', 'objection'],
+          ),
+          Sentence(
+            'Poiché la premessa è debole, la conclusione che ne deriva non può essere accettata.',
+            'Since the premise is weak, the conclusion that follows cannot be accepted.',
+            extraIt: ['argomentazione', 'confutare'],
+            extraEn: ['argument', 'refute'],
+          ),
+          Sentence(
+            "Anche se avessi tutte le prove, dubito che bastino a confutare quell'obiezione.",
+            'Even if I had all the evidence, I doubt that they are enough to refute that objection.',
+            extraIt: ['premessa', 'tesi'],
+            extraEn: ['premise', 'thesis'],
+          ),
+          Sentence(
+            'Se la commissione avesse ascoltato gli esperti, il progetto non sarebbe fallito.',
+            'If the committee had listened to the experts, the project would not have failed.',
+            extraIt: ['obiezione', 'argomentazione'],
+            extraEn: ['objection', 'argument'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u55l2',
+        title: 'Mixed registers',
+        words: [
+          Word('u55l2w1', 'pertanto', 'therefore'),
+          Word('u55l2w2', 'insomma', 'in short'),
+          Word('u55l2w3', 'tuttavia', 'nevertheless'),
+          Word('u55l2w4', 'giacché', 'since'),
+          Word('u55l2w5', 'cioè', 'that is'),
+          Word('u55l2w6', 'ebbene', 'well then'),
+        ],
+        sentences: [
+          Sentence(
+            'Pertanto, la proposta va respinta, insomma non ci conviene affatto.',
+            'Therefore, the proposal must be rejected, in short it does not suit us at all.',
+            extraIt: ['tuttavia', 'cioè'],
+            extraEn: ['nevertheless', 'that is'],
+          ),
+          Sentence(
+            'Tuttavia non voglio litigare con te, giacché siamo amici da molti anni.',
+            'Nevertheless, I do not want to argue with you, since we have been friends for many years.',
+            extraIt: ['pertanto', 'cioè'],
+            extraEn: ['therefore', 'that is'],
+          ),
+          Sentence(
+            'Cioè, il progetto è fallito, e nessuno ha il coraggio di ammetterlo.',
+            'That is, the project has failed, and nobody has the courage to admit it.',
+            extraIt: ['giacché', 'ebbene'],
+            extraEn: ['since', 'well then'],
+          ),
+          Sentence(
+            'Ebbene, ragazzi, mettiamoci al lavoro, perché il tempo stringe davvero.',
+            'Well then, guys, let us get to work, because time is really running short.',
+            extraIt: ['pertanto', 'insomma'],
+            extraEn: ['therefore', 'nevertheless'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u55l3',
+        title: 'Summary and paraphrase',
+        words: [
+          Word('u55l3w1', 'sintesi', 'summary'),
+          Word('u55l3w2', 'parafrasi', 'paraphrase'),
+          Word('u55l3w3', 'riassumere', 'to summarise'),
+          Word('u55l3w4', 'riformulare', 'to reformulate'),
+          Word('u55l3w5', 'essenziale', 'essential'),
+          Word('u55l3w6', 'implicito', 'implicit'),
+        ],
+        sentences: [
+          Sentence(
+            "Una buona sintesi conserva l'idea centrale e omette i dettagli secondari.",
+            'A good summary keeps the central idea and leaves out the secondary details.',
+            extraIt: ['parafrasi', 'implicito'],
+            extraEn: ['paraphrase', 'implicit'],
+          ),
+          Sentence(
+            'Nella parafrasi bisogna riformulare il concetto senza alterarne il senso.',
+            'In a paraphrase, one must reformulate the concept without altering its meaning.',
+            extraIt: ['essenziale', 'riassumere'],
+            extraEn: ['essential', 'summarise'],
+          ),
+          Sentence(
+            "Il messaggio implicito dell'autore è più importante del testo esplicito.",
+            'The implicit message of the author is more important than the explicit text.',
+            extraIt: ['sintesi', 'riassumere'],
+            extraEn: ['summary', 'reformulate'],
+          ),
+          Sentence(
+            'Per riassumere un saggio complesso, occorre individuare la tesi e le prove principali.',
+            'To summarise a complex essay, one must identify the thesis and the main evidence.',
+            extraIt: ['parafrasi', 'implicito'],
+            extraEn: ['paraphrase', 'implicit'],
+          ),
+        ],
+      ),
+      LessonDef(
+        id: 'u55l4',
+        title: 'Tenses and moods in context',
+        words: [
+          Word('u55l4w1', 'congiuntivo', 'subjunctive'),
+          Word('u55l4w2', 'condizionale', 'conditional'),
+          Word('u55l4w3', 'trapassato', 'pluperfect'),
+          Word('u55l4w4', 'passato remoto', 'remote past'),
+          Word('u55l4w5', 'gerundio', 'gerund'),
+          Word('u55l4w6', 'imperativo', 'imperative'),
+        ],
+        sentences: [
+          Sentence(
+            'Quando arrivò alla stazione, il treno era già partito da un\'ora.',
+            'When he reached the station, the train had already left an hour earlier.',
+            extraIt: ['congiuntivo', 'gerundio'],
+            extraEn: ['gerund', 'conditional'],
+          ),
+          Sentence(
+            'Se tu avessi ascoltato il consiglio, oggi non saresti nei guai.',
+            'If you had listened to the advice, you would not be in trouble today.',
+            extraIt: ['trapassato', 'imperativo'],
+            extraEn: ['pluperfect', 'imperative'],
+          ),
+          Sentence(
+            'Ascolta bene, perché non ripeterò mai più questa semplice spiegazione.',
+            'Listen carefully, because I will never repeat this simple explanation again.',
+            extraIt: ['gerundio', 'condizionale'],
+            extraEn: ['pluperfect', 'subjunctive'],
+          ),
+          Sentence(
+            "Stavo leggendo un libro quando, all'improvviso, qualcuno bussò forte alla porta.",
+            'I was reading a book when, suddenly, someone knocked hard on the door.',
+            extraIt: ['congiuntivo', 'condizionale'],
+            extraEn: ['gerund', 'subjunctive'],
+          ),
+        ],
+      ),
+    ],
+  ),
+];
